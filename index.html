@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTA High Glass | Premium Glass Installations in Toronto</title>
+    <meta name="description" content="Premium glass installations in Toronto — custom showers, railings, mirrors, office partitions. Expert craftsmanship with modern design solutions.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Base Styles */
+        :root {
+            --primary-blue: #1e88e5;
+            --primary-blue-light: #64b5f6;
+            --primary-blue-dark: #1565c0;
+            --accent-gold: #ffb300;
+            --neutral-light: #f8fdff;
+            --neutral-dark: #0a1a2a;
+            --text-light: #2c3e50;
+            --text-dark: #e3f2fd;
+            --muted-light: #607d8b;
+            --muted-dark: #90a4ae;
+            --success: #4caf50;
+            --warning: #ff9800;
+            --glass-bg-light: rgba(248, 253, 255, 0.85);
+            --glass-bg-dark: rgba(10, 26, 42, 0.9);
+            --glass-border-light: rgba(30, 136, 229, 0.15);
+            --glass-border-dark: rgba(100, 181, 246, 0.1);
+            --glass-shadow-light: 0 8px 32px rgba(30, 136, 229, 0.1);
+            --glass-shadow-dark: 0 8px 32px rgba(0, 0, 0, 0.3);
+            --glass-blur: 12px;
+            --border-radius: 12px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: var(--neutral-light);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+            transition: var(--transition);
+        }
+
+        body.dark {
+            background: var(--neutral-dark);
+            color: var(--text-dark);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        h3 {
+            font-size: 1.75rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
+            color: white;
+            box-shadow: 0 4px 15px rgba(30, 136, 229, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(30, 136, 229, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--primary-blue);
+            color: var(--primary-blue);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+
+        .section-header h2 {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--muted-light);
+        }
+
+        body.dark .section-header p {
+            color: var(--muted-dark);
+        }
+
+        /* Background Effects */
+        .bg-effect {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .bg-effect::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            top: -50%;
+            left: -50%;
+            background: radial-gradient(ellipse at center, 
+                rgba(30, 136, 229, 0.05) 0%, 
+                rgba(100, 181, 246, 0.03) 30%, 
+                transparent 70%);
+            animation: rotate 60s infinite linear;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            background: var(--glass-bg-light);
+            backdrop-filter: blur(var(--glass-blur));
+            box-shadow: var(--glass-shadow-light);
+            padding: 15px 0;
+        }
+
+        body.dark header.scrolled {
+            background: var(--glass-bg-dark);
+            box-shadow: var(--glass-shadow-dark);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-text .company-name {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .logo-text .tagline {
+            font-size: 0.75rem;
+            color: var(--muted-light);
+            letter-spacing: 0.5px;
+        }
+
+        body.dark .logo-text .tagline {
+            color: var(--muted-dark);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 600;
+            position: relative;
+            padding: 8px 0;
+            transition: var(--transition);
+        }
+
+        nav a:hover {
+            color: var(--primary-blue);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--primary-blue-light));
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .theme-toggle {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--glass-bg-light);
+            backdrop-filter: blur(var(--glass-blur));
+            border: 1px solid var(--glass-border-light);
+            cursor: pointer;
+            transition: var(--transition);
+            color: var(--primary-blue);
+        }
+
+        body.dark .theme-toggle {
+            background: var(--glass-bg-dark);
+            border: 1px solid var(--glass-border-dark);
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(30, 136, 229, 0.2);
+        }
+
+        .mobile-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(10, 26, 42, 0.85), rgba(30, 136, 229, 0.7)), url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center;
+            background-size: cover;
+            z-index: -1;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-text {
+            color: white;
+        }
+
+        .hero-text .welcome {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--accent-gold);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .hero-text h1 {
+            margin-bottom: 25px;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 35px;
+            opacity: 0.9;
+            max-width: 600px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .hero-card {
+            background: var(--glass-bg-light);
+            backdrop-filter: blur(var(--glass-blur));
+            border-radius: var(--border-radius);
+            padding: 30px;
+            border: 1px solid var(--glass-border-light);
+            box-shadow: var(--glass-shadow-light);
+            color: var(--text-light);
+        }
+
+        body.dark .hero-card {
+            background: var(--glass-bg-dark);
+            border: 1px solid var(--glass-border-dark);
+            box-shadow: var(--glass-shadow-dark);
+            color: var(--text-dark);
+        }
+
+        .hero-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .contact-item .icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(30, 136, 229, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-blue);
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            color: var(--primary-blue);
+            margin-bottom: 25px;
+        }
+
+        .about-text p {
+            color: var(--muted-light);
+            margin-bottom: 25px;
+        }
+
+        body.dark .about-text p {
+            color: var(--muted-dark);
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .feature .icon {
+            color: var(--primary-blue);
+            font-size: 1.2rem;
+            margin-top: 3px;
+        }
+
+        .about-image {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: var(--transition);
+        }
+
+        .about-image:hover {
+            transform: perspective(1000px) rotateY(0);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .about-image:hover img {
+            transform: scale(1.03);
+        }
+
+        /* Services Section */
+        .services {
+            background: var(--glass-bg-light);
+            backdrop-filter: blur(var(--glass-blur));
+        }
+
+        body.dark .services {
+            background: var(--glass-bg-dark);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        body.dark .service-card {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(30, 136, 229, 0.15);
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        .service-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: var(--muted-light);
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        body.dark .service-card p {
+            color: var(--muted-dark);
+        }
+
+        .service-image {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: auto;
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-image img {
+            transform: scale(1.05);
+        }
+
+        /* Portfolio Section */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+        }
+
+        .portfolio-item {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            height: 300px;
+            transition: var(--transition);
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(10, 26, 42, 0.9), transparent);
+            color: white;
+            padding: 25px;
+            transform: translateY(100%);
+            transition: var(--transition);
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            transform: translateY(0);
+        }
+
+        .portfolio-overlay h3 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+        }
+
+        .portfolio-overlay p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 0;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-form {
+            background: var(--glass-bg-light);
+            backdrop-filter: blur(var(--glass-blur));
+            border-radius: var(--border-radius);
+            padding: 40px;
+            border: 1px solid var(--glass-border-light);
+            box-shadow: var(--glass-shadow-light);
+        }
+
+        body.dark .contact-form {
+            background: var(--glass-bg-dark);
+            border: 1px solid var(--glass-border-dark);
+            box-shadow: var(--glass-shadow-dark);
+        }
+
+        .contact-form h3 {
+            color: var(--primary-blue);
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 14px 16px;
+            border-radius: 8px;
+            border: 1px solid var(--glass-border-light);
+            background: rgba(255, 255, 255, 0.7);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+            color: var(--text-light);
+        }
+
+        body.dark .form-control {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border-dark);
+            color: var(--text-dark);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.2);
+        }
+
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .info-card {
+            background: var(--glass-bg-light);
+            backdrop-filter: blur(var(--glass-blur));
+            border-radius: var(--border-radius);
+            padding: 30px;
+            border: 1px solid var(--glass-border-light);
+            box-shadow: var(--glass-shadow-light);
+            transition: var(--transition);
+        }
+
+        body.dark .info-card {
+            background: var(--glass-bg-dark);
+            border: 1px solid var(--glass-border-dark);
+            box-shadow: var(--glass-shadow-dark);
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .info-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        .info-item .icon {
+            color: var(--primary-blue);
+            margin-top: 3px;
+        }
+
+        .hours-list {
+            list-style: none;
+        }
+
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--glass-border-light);
+        }
+
+        body.dark .hours-list li {
+            border-bottom: 1px solid var(--glass-border-dark);
+        }
+
+        .map-container {
+            height: 250px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-content h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .cta-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-buttons .btn {
+            background: white;
+            color: var(--primary-blue);
+        }
+
+        .cta-buttons .btn-secondary {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        .cta-buttons .btn-secondary:hover {
+            background: white;
+            color: var(--primary-blue);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--glass-bg-light);
+            color: var(--text-light);
+            padding: 80px 0 30px;
+            border-top: 1px solid var(--glass-border-light);
+        }
+
+        body.dark footer {
+            background: var(--glass-bg-dark);
+            border-top: 1px solid var(--glass-border-dark);
+            color: var(--text-dark);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        .footer-brand {
+            margin-bottom: 20px;
+        }
+
+        .footer-brand .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .footer-brand .logo-img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .footer-brand h3 {
+            font-size: 1.5rem;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .footer-brand p {
+            opacity: 0.8;
+            margin-bottom: 25px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--glass-bg-light);
+            border: 1px solid var(--glass-border-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            transition: var(--transition);
+        }
+
+        body.dark .social-link {
+            background: var(--glass-bg-dark);
+            border: 1px solid var(--glass-border-dark);
+            color: var(--text-dark);
+        }
+
+        .social-link:hover {
+            background: var(--primary-blue);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .footer-links h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            color: var(--primary-blue);
+        }
+
+        .footer-links h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--primary-blue-light));
+        }
+
+        .footer-links ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--primary-blue);
+            padding-left: 5px;
+        }
+
+        .footer-contact h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            color: var(--primary-blue);
+        }
+
+        .footer-contact h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--primary-blue-light));
+        }
+
+        .footer-contact p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            opacity: 0.8;
+        }
+
+        .footer-contact .icon {
+            margin-top: 3px;
+            color: var(--primary-blue);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid var(--glass-border-light);
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        body.dark .footer-bottom {
+            border-top: 1px solid var(--glass-border-dark);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                display: none;
+            }
+            
+            .mobile-toggle {
+                display: block;
+            }
+            
+            .hero-actions {
+                justify-content: center;
+            }
+            
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            section {
+                padding: 70px 0;
+            }
+            
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-actions {
+                flex-direction: column;
+            }
+            
+            .hero-actions .btn {
+                width: 100%;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+            
+            .cta-buttons .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Effect -->
+    <div class="bg-effect"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-img">
+                    <img src="https://static.wixstatic.com/media/39abfb_2129aaa2ffa045c6bff55df45f90bc82~mv2.png/v1/fill/w_327,h_314,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202024-06-30%20142006.png" alt="GTA High Glass Logo">
+                </div>
+                <div class="logo-text">
+                    <div class="company-name">GTA High Glass</div>
+                    <div class="tagline">Precision • Elegance • Installation</div>
+                </div>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="#contact" class="btn btn-primary">Get Quote</a>
+                <div class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </div>
+                <div class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <div class="welcome">WELCOME TO GTA HIGH GLASS</div>
+                <h1>Transform Your Space With Premium Glass Solutions</h1>
+                <p>Expert craftsmanship and modern design solutions for residential and commercial properties across the Greater Toronto Area.</p>
+                <div class="hero-actions">
+                    <a href="#portfolio" class="btn btn-primary">View Our Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get Free Quote</a>
+                </div>
+            </div>
+            <div class="hero-card">
+                <h3><i class="fas fa-info-circle"></i> Contact Info</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <strong>647-571-5490</strong>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <strong>info@gtahighglass.com</strong>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <strong>Serving Greater Toronto Area</strong>
+                        </div>
+                    </div>
+                </div>
+                <a href="#contact" class="btn btn-primary" style="width: 100%; margin-top: 20px;">Contact Us Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About GTA High Glass</h2>
+                <p>With years of experience in premium glass installations, we bring precision and elegance to every project.</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Crafting Excellence in Glass</h3>
+                    <p>At GTA High Glass, we specialize in transforming residential and commercial spaces with custom glass solutions. Our team of skilled professionals combines technical expertise with an eye for design to deliver installations that exceed expectations.</p>
+                    <p>From initial consultation to final installation, we focus on precision, quality materials, and customer satisfaction. Whether you need a frameless shower enclosure, elegant glass railings, or custom mirrors, we have the expertise to bring your vision to life.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature">
+                            <span class="icon"><i class="fas fa-check"></i></span>
+                            <span>Expert Craftsmanship</span>
+                        </div>
+                        <div class="feature">
+                            <span class="icon"><i class="fas fa-check"></i></span>
+                            <span>Premium Materials</span>
+                        </div>
+                        <div class="feature">
+                            <span class="icon"><i class="fas fa-check"></i></span>
+                            <span>Custom Solutions</span>
+                        </div>
+                        <div class="feature">
+                            <span class="icon"><i class="fas fa-check"></i></span>
+                            <span>Timely Completion</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="btn btn-primary">Schedule Consultation</a>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1558&q=80" alt="Glass installation professional at work">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Comprehensive glass solutions for residential and commercial properties</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shower"></i>
+                    </div>
+                    <h3>Shower Enclosures</h3>
+                    <p>Transform your bathroom with elegant, frameless shower enclosures that create a spacious and modern look while providing durability and easy maintenance.</p>
+                    <div class="service-image">
+                        <img src="https://images.squarespace-cdn.com/content/v1/57ec07a7b8a79bcc0551ea01/1584566837283-UDO8Y3ZL66TJWIC7NW17/Kartak+white+shower.jpg?format=1500w" alt="Glass shower enclosure">
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Glass Railings</h3>
+                    <p>Enhance safety and aesthetics with our custom glass railings for balconies, staircases, and decks. Perfect for modern residential and commercial spaces.</p>
+                    <div class="service-image">
+                        <img src="https://specializedstairs.com/wp-content/uploads/2018/06/Dadoed-Glass-Railing2.jpg" alt="Glass railing installation">
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h3>Custom Mirrors</h3>
+                    <p>Add elegance and functionality with our bespoke mirror installations. From bathroom mirrors to decorative wall mirrors, we customize to fit your space perfectly.</p>
+                    <div class="service-image">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/81Vn8sospVL.jpg" alt="Custom mirror installation">
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-door-open"></i>
+                    </div>
+                    <h3>Office Partitions</h3>
+                    <p>Create modern, open workspaces with our glass office partitions. Enhance natural light flow while maintaining privacy and acoustic control.</p>
+                    <div class="service-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRYHtixyvOGze0r7wPm9VkEtmBRl0okMtrsg&s" alt="Glass office partitions">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Portfolio</h2>
+                <p>Explore our recent projects and see how we've transformed spaces with premium glass installations</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="https://static.wixstatic.com/media/39abfb_62875ceac7404c09bb2ff78bd9aca713~mv2.jpeg/v1/fill/w_680,h_606,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5794.jpeg" alt="Glass installation project 1">
+                    <div class="portfolio-overlay">
+                        <h3>Modern Shower Enclosure</h3>
+                        <p>Frameless design with custom fittings</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="https://static.wixstatic.com/media/39abfb_ade0f875958a4fe1ac63c1f1eefe3c9f~mv2.jpeg/v1/fill/w_680,h_606,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5795.jpeg" alt="Glass installation project 2">
+                    <div class="portfolio-overlay">
+                        <h3>Balcony Glass Railing</h3>
+                        <p>Sturdy and elegant safety solution</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="https://static.wixstatic.com/media/39abfb_b0ea1553588b484cb8e30dfb701bef7d~mv2.jpeg/v1/fill/w_680,h_606,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5793.jpeg" alt="Glass installation project 3">
+                    <div class="portfolio-overlay">
+                        <h3>Office Glass Partitions</h3>
+                        <p>Creating open yet defined workspaces</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="https://static.wixstatic.com/media/39abfb_ecc50d5ea47741afb9f26044f1497c63~mv2.jpeg/v1/fill/w_680,h_606,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5792.jpeg" alt="Glass installation project 4">
+                    <div class="portfolio-overlay">
+                        <h3>Custom Bathroom Mirror</h3>
+                        <p>Precision cut for perfect fit</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="https://static.wixstatic.com/media/39abfb_5e3a4b7372cc4b15a181d7de1b325d84~mv2.jpeg/v1/fill/w_680,h_606,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5797.jpeg" alt="Glass installation project 5">
+                    <div class="portfolio-overlay">
+                        <h3>Staircase Glass Railing</h3>
+                        <p>Combining safety with modern aesthetics</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <img src="https://static.wixstatic.com/media/39abfb_09211adef9ea413fab889e65929d1ba7~mv2.jpeg/v1/fill/w_680,h_606,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5791.jpeg" alt="Glass installation project 6">
+                    <div class="portfolio-overlay">
+                        <h3>Commercial Glass Installation</h3>
+                        <p>Professional space division solution</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <p>Get in touch for a free consultation and quote</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-form">
+                    <h3>Request a Quote</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Interested In</label>
+                            <select id="service" class="form-control">
+                                <option value="">Select a service</option>
+                                <option value="showers">Shower Enclosures</option>
+                                <option value="railings">Glass Railings</option>
+                                <option value="mirrors">Custom Mirrors</option>
+                                <option value="partitions">Office Partitions</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Project Details</label>
+                            <textarea id="message" class="form-control" rows="5"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="info-card">
+                        <h3><i class="fas fa-address-card"></i> Contact Information</h3>
+                        <div class="info-item">
+                            <span class="icon"><i class="fas fa-phone"></i></span>
+                            <span><strong>Phone:</strong> 647-571-5490</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="icon"><i class="fas fa-envelope"></i></span>
+                            <span><strong>Email:</strong> info@gtahighglass.com</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
+                            <span><strong>Service Area:</strong> Greater Toronto Area</span>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3><i class="fas fa-clock"></i> Business Hours</h3>
+                        <ul class="hours-list">
+                            <li><span>Monday - Friday</span> <span>8:00 AM - 5:00 PM</span></li>
+                            <li><span>Saturday</span> <span>9:00 AM - 3:00 PM</span></li>
+                            <li><span>Sunday</span> <span>9:00 AM - 2:00 PM</span></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d184552.5728978346!2d-79.51814050000001!3d43.7181558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb90d7c63ba5%3A0x323555502ab4c477!2sToronto%2C%20ON!5e0!3m2!1sen!2sca!4v1695849872459!5m2!1sen!2sca" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container cta-content">
+            <h2>Ready to Transform Your Space?</h2>
+            <p>Contact GTA High Glass today for a free consultation and quote. Let us bring clarity and sophistication to your project.</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn">Get Free Quote</a>
+                <a href="tel:6475715490" class="btn btn-secondary">Call Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-img">
+                            <img src="https://static.wixstatic.com/media/39abfb_2129aaa2ffa045c6bff55df45f90bc82~mv2.png/v1/fill/w_327,h_314,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202024-06-30%20142006.png" alt="GTA High Glass Logo">
+                        </div>
+                        <h3>GTA High Glass</h3>
+                    </div>
+                    <p>Premium glass installations in Toronto. Transforming spaces with precision, elegance, and expert craftsmanship.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <p><span class="icon"><i class="fas fa-phone"></i></span> 647-571-5490</p>
+                    <p><span class="icon"><i class="fas fa-envelope"></i></span> info@gtahighglass.com</p>
+                    <p><span class="icon"><i class="fas fa-map-marker-alt"></i></span> Serving Greater Toronto Area</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2023 GTA High Glass. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggle = document.getElementById('theme-toggle');
+            const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+            
+            // Check for saved theme or prefered scheme
+            const currentTheme = localStorage.getItem('theme') || 
+                                (prefersDarkScheme.matches ? 'dark' : 'light');
+            
+            if (currentTheme === 'dark') {
+                document.body.classList.add('dark');
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            }
+            
+            themeToggle.addEventListener('click', function() {
+                document.body.classList.toggle('dark');
+                
+                const theme = document.body.classList.contains('dark') ? 'dark' : 'light';
+                localStorage.setItem('theme', theme);
+                
+                // Update icon
+                if (theme === 'dark') {
+                    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            });
+            
+            // Header scroll effect
+            window.addEventListener('scroll', function() {
+                const header = document.querySelector('header');
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+            
+            // Contact form handling
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Get form data
+                    const formData = new FormData(contactForm);
+                    const name = document.getElementById('name').value || 'friend';
+                    
+                    // Show success message (in a real app, you would send this to a server)
+                    alert(`Thank you, ${name}! Your inquiry has been received. We will contact you within 24 hours.`);
+                    
+                    // Reset form
+                    contactForm.reset();
+                });
+            }
+            
+            // Mobile menu toggle
+            const mobileToggle = document.querySelector('.mobile-toggle');
+            const nav = document.querySelector('nav ul');
+            
+            if (mobileToggle) {
+                mobileToggle.addEventListener('click', function() {
+                    nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+                });
+            }
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        // Close mobile menu if open
+                        if (nav.style.display === 'flex') {
+                            nav.style.display = 'none';
+                        }
+                        
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
