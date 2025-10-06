@@ -648,6 +648,114 @@
             margin-bottom: 0;
         }
 
+        /* Reviews Section */
+        .reviews {
+            background: var(--glass-bg-light);
+            backdrop-filter: blur(var(--glass-blur));
+        }
+
+        body.dark .reviews {
+            background: var(--glass-bg-dark);
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .review-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        body.dark .review-card {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(30, 136, 229, 0.1);
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .reviewer-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .reviewer-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .reviewer-details h4 {
+            margin-bottom: 5px;
+            color: var(--primary-blue);
+        }
+
+        .reviewer-details p {
+            margin-bottom: 0;
+            font-size: 0.9rem;
+            color: var(--muted-light);
+        }
+
+        body.dark .reviewer-details p {
+            color: var(--muted-dark);
+        }
+
+        .rating {
+            display: flex;
+            gap: 5px;
+        }
+
+        .rating i {
+            color: var(--accent-gold);
+            font-size: 1.1rem;
+        }
+
+        .review-text {
+            color: var(--muted-light);
+            font-style: italic;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        body.dark .review-text {
+            color: var(--muted-dark);
+        }
+
+        .review-text::before {
+            content: '"';
+            position: absolute;
+            left: 0;
+            top: -10px;
+            font-size: 3rem;
+            color: var(--primary-blue-light);
+            opacity: 0.3;
+            font-family: Georgia, serif;
+        }
+
         /* Contact Section */
         .contact-container {
             display: grid;
@@ -1060,6 +1168,10 @@
                 grid-template-columns: 1fr;
             }
             
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+            
             .footer-content {
                 grid-template-columns: 1fr;
             }
@@ -1115,6 +1227,7 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -1332,6 +1445,127 @@
         </div>
     </section>
 
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews">
+        <div class="container">
+            <div class="section-header">
+                <h2>Customer Reviews</h2>
+                <p>See what our clients say about our premium glass installation services</p>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">JS</div>
+                            <div class="reviewer-details">
+                                <h4>Jennifer Smith</h4>
+                                <p>Condominium Renovation</p>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="review-text">
+                        GTA High Glass transformed my bathroom with a stunning frameless shower enclosure. The attention to detail was exceptional, and the installation was completed ahead of schedule. My bathroom now looks like it's from a luxury magazine. Highly recommend their services!
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">MR</div>
+                            <div class="reviewer-details">
+                                <h4>Michael Roberts</h4>
+                                <p>Office Renovation</p>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="review-text">
+                        We hired GTA High Glass for glass partitions in our new downtown office. The team was professional, punctual, and the quality of work exceeded our expectations. The partitions have completely transformed our workspace, making it feel more open and modern.
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">SC</div>
+                            <div class="reviewer-details">
+                                <h4>Sarah Chen</h4>
+                                <p>Residential Balcony</p>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="review-text">
+                        The glass railing installation for our balcony was flawless. The team was careful, clean, and respectful of our home. The finished product is not only beautiful but feels incredibly secure. We've received so many compliments from neighbors!
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">DW</div>
+                            <div class="reviewer-details">
+                                <h4>David Wilson</h4>
+                                <p>Custom Mirror Installation</p>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="review-text">
+                        I needed custom mirrors for my boutique hotel, and GTA High Glass delivered perfection. The mirrors were precisely cut to fit our unique spaces, and the installation was seamless. The team was professional and completed the project on time and within budget.
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">AP</div>
+                            <div class="reviewer-details">
+                                <h4>Amanda Patel</h4>
+                                <p>Staircase Railing Project</p>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="review-text">
+                        Our staircase glass railing has completely transformed the look of our home. The team at GTA High Glass was incredibly knowledgeable and helped us choose the perfect style. The installation was quick and clean, and we couldn't be happier with the results!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact">
         <div class="container">
@@ -1452,6 +1686,7 @@
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
