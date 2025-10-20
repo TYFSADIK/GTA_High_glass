@@ -1,1917 +1,2198 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crown Shisha Catering - Premier Event Catering Services | Toronto GTA</title>
-    <meta name="description" content="Professional shisha catering services for corporate events, weddings, and private functions. Serving Toronto GTA with premium quality and exceptional service.">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GTA High Glass | Premium Glass Installations in Toronto</title>
+<meta content="Premium glass installations in Toronto — custom showers, railings, mirrors, office partitions. Expert craftsmanship with modern design solutions." name="description"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        /* Base Styles */
+        :root {
+            --primary-blue: #1e88e5;
+            --primary-blue-light: #64b5f6;
+            --primary-blue-dark: #1565c0;
+            --accent-gold: #ffb300;
+            --neutral-light: #f8fdff;
+            --neutral-dark: #0a1a2a;
+            --text-light: #2c3e50;
+            --text-dark: #e3f2fd;
+            --muted-light: #607d8b;
+            --muted-dark: #90a4ae;
+            --success: #4caf50;
+            --warning: #ff9800;
+            --glass-bg-light: rgba(248, 253, 255, 0.85);
+            --glass-bg-dark: rgba(10, 26, 42, 0.9);
+            --glass-border-light: rgba(30, 136, 229, 0.15);
+            --glass-border-dark: rgba(100, 181, 246, 0.1);
+            --glass-shadow-light: 0 8px 32px rgba(30, 136, 229, 0.1);
+            --glass-shadow-dark: 0 8px 32px rgba(0, 0, 0, 0.3);
+            --glass-blur: 12px;
+            --border-radius: 12px;
+            --transition: all 0.3s ease;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        :root {
-            --primary-gold: #c9a96e;
-            --secondary-gold: #b8941f;
-            --accent-gold: #f4e4bc;
-            --dark-bg: #0f0f0f;
-            --darker-bg: #000000;
-            --card-bg: #1a1a1a;
-            --text-primary: #ffffff;
-            --text-secondary: #b8b8b8;
-            --text-muted: #808080;
-            --border-color: rgba(201, 169, 110, 0.15);
-            --success-color: #28a745;
-            --light-bg: #f8f9fa;
-            --light-text: #333333;
-            --light-card: #ffffff;
-        }
-
-        [data-theme="light"] {
-            --dark-bg: #ffffff;
-            --darker-bg: #f8f9fa;
-            --card-bg: #f8f9fa;
-            --text-primary: #1a1a1a;
-            --text-secondary: #4a4a4a;
-            --text-muted: #6a6a6a;
-            --border-color: rgba(201, 169, 110, 0.25);
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--dark-bg);
-            color: var(--text-primary);
-            line-height: 1.7;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: var(--neutral-light);
+            color: var(--text-light);
+            line-height: 1.6;
             overflow-x: hidden;
-            transition: all 0.3s ease;
+            transition: var(--transition);
         }
 
-        .heading-font {
-            font-family: 'Playfair Display', serif;
+        body.dark {
+            background: var(--neutral-dark);
+            color: var(--text-dark);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            gap: 8px;
+            font-size: 0.95rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
+            color: white;
+            box-shadow: 0 4px 15px rgba(30, 136, 229, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(30, 136, 229, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--primary-blue);
+            color: var(--primary-blue);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+
+        .section-header h2 {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            font-size: 1rem;
+            color: var(--muted-light);
+        }
+
+        body.dark .section-header p {
+            color: var(--muted-dark);
+        }
+
+        /* Background Effects */
+        .bg-effect {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .bg-effect::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            top: -50%;
+            left: -50%;
+            background: radial-gradient(ellipse at center, 
+                rgba(30, 136, 229, 0.05) 0%, 
+                rgba(100, 181, 246, 0.03) 30%, 
+                transparent 70%);
+            animation: rotate 60s infinite linear;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
         /* Header */
-        .header {
+        header {
             position: fixed;
             top: 0;
+            left: 0;
             width: 100%;
-            background: rgba(15, 15, 15, 0.97);
-            backdrop-filter: blur(15px);
             z-index: 1000;
-            padding: 1rem 0;
-            transition: all 0.3s ease;
-            border-bottom: 1px solid var(--border-color);
+            padding: 15px 0;
+            transition: var(--transition);
         }
 
-        [data-theme="light"] .header {
-            background: rgba(255, 255, 255, 0.97);
+        header.scrolled {
+            background: var(--glass-bg-light);
+            backdrop-filter: blur(var(--glass-blur));
+            box-shadow: var(--glass-shadow-light);
+            padding: 12px 0;
         }
 
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
+        body.dark header.scrolled {
+            background: var(--glass-bg-dark);
+            box-shadow: var(--glass-shadow-dark);
+        }
+
+        .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 3rem;
         }
 
         .logo {
             display: flex;
             align-items: center;
-            font-size: 1.6rem;
-            font-weight: 600;
-            color: var(--primary-gold);
-            text-decoration: none;
+            gap: 10px;
         }
 
-        .logo i {
-            margin-right: 0.7rem;
-            font-size: 2rem;
+        .logo-img {
+            width: 45px;
+            height: 45px;
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
 
         .logo-text {
             display: flex;
             flex-direction: column;
-            line-height: 1.2;
         }
 
-        .logo-main {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.4rem;
-            font-weight: 600;
+        .logo-text .company-name {
+            font-size: 1.3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .logo-sub {
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 2.5rem;
-        }
-
-        .nav-menu a {
-            color: var(--text-primary);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
+        .logo-text .tagline {
+            font-size: 0.7rem;
+            color: var(--muted-light);
             letter-spacing: 0.5px;
-            transition: color 0.3s ease;
+        }
+
+        body.dark .logo-text .tagline {
+            color: var(--muted-dark);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            font-weight: 600;
             position: relative;
-            text-transform: uppercase;
+            padding: 8px 0;
+            transition: var(--transition);
+            font-size: 0.95rem;
         }
 
-        .nav-menu a:hover {
-            color: var(--primary-gold);
+        nav a:hover {
+            color: var(--primary-blue);
         }
 
-        .nav-menu a::after {
+        nav a::after {
             content: '';
             position: absolute;
-            bottom: -5px;
-            left: 50%;
+            bottom: 0;
+            left: 0;
             width: 0;
             height: 2px;
-            background: var(--primary-gold);
-            transition: all 0.3s ease;
-            transform: translateX(-50%);
+            background: linear-gradient(90deg, var(--primary-blue), var(--primary-blue-light));
+            transition: var(--transition);
         }
 
-        .nav-menu a:hover::after {
+        nav a:hover::after {
             width: 100%;
         }
 
         .header-actions {
             display: flex;
             align-items: center;
-            gap: 1.5rem;
+            gap: 12px;
         }
 
         .theme-toggle {
-            background: var(--card-bg);
-            border: 2px solid var(--border-color);
-            border-radius: 50px;
-            width: 50px;
-            height: 26px;
-            cursor: pointer;
-            position: relative;
-            transition: all 0.3s ease;
-        }
-
-        .theme-toggle::before {
-            content: '';
-            position: absolute;
-            top: 2px;
-            left: 2px;
-            width: 18px;
-            height: 18px;
-            background: var(--primary-gold);
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
-            transition: transform 0.3s ease;
-        }
-
-        [data-theme="light"] .theme-toggle::before {
-            transform: translateX(22px);
-        }
-
-        .cta-header {
-            background: linear-gradient(45deg, var(--primary-gold), var(--secondary-gold));
-            color: var(--darker-bg);
-            padding: 10px 20px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-        }
-
-        .cta-header:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(201, 169, 110, 0.4);
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--text-primary);
-            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--glass-bg-light);
+            backdrop-filter: blur(var(--glass-blur));
+            border: 1px solid var(--glass-border-light);
             cursor: pointer;
+            transition: var(--transition);
+            color: var(--primary-blue);
+        }
+
+        body.dark .theme-toggle {
+            background: var(--glass-bg-dark);
+            border: 1px solid var(--glass-border-dark);
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(30, 136, 229, 0.2);
+        }
+
+        .mobile-toggle {
+            display: none;
+            font-size: 1.3rem;
+            cursor: pointer;
+            color: var(--primary-blue);
         }
 
         /* Hero Section */
         .hero {
-            height: 100vh;
-            background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 50%, var(--card-bg) 100%);
+            min-height: 100vh;
             display: flex;
             align-items: center;
-            justify-content: center;
-            text-align: center;
             position: relative;
             overflow: hidden;
+            padding: 100px 0 80px;
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 50% 50%, rgba(201, 169, 110, 0.1) 0%, transparent 70%);
-            z-index: 1;
-        }
-
-        .hero-content {
-            max-width: 900px;
-            z-index: 2;
-            position: relative;
-            padding: 0 2rem;
-        }
-
-        .hero-badge {
-            display: inline-block;
-            background: rgba(201, 169, 110, 0.1);
-            border: 1px solid var(--primary-gold);
-            color: var(--primary-gold);
-            padding: 8px 20px;
-            border-radius: 25px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            margin-bottom: 2rem;
-        }
-
-        .crown-icon {
-            font-size: 3.5rem;
-            color: var(--primary-gold);
-            margin-bottom: 1.5rem;
-            animation: float 4s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-8px); }
-        }
-
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 4rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(45deg, var(--primary-gold), var(--secondary-gold), var(--accent-gold));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            line-height: 1.2;
-        }
-
-        .hero-subtitle {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            color: var(--text-secondary);
-            font-weight: 400;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero-features {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .hero-feature {
-            display: flex;
-            align-items: center;
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            font-weight: 500;
-        }
-
-        .hero-feature i {
-            color: var(--primary-gold);
-            margin-right: 0.5rem;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 14px 32px;
-            border: none;
-            border-radius: 6px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .btn-primary {
-            background: linear-gradient(45deg, var(--primary-gold), var(--secondary-gold));
-            color: var(--darker-bg);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(201, 169, 110, 0.4);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--text-primary);
-            border: 2px solid var(--primary-gold);
-        }
-
-        .btn-secondary:hover {
-            background: var(--primary-gold);
-            color: var(--darker-bg);
-            transform: translateY(-3px);
-        }
-
-        /* Trust Indicators */
-        .trust-section {
-            padding: 80px 0;
-            background: var(--card-bg);
-            border-top: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .trust-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 3rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 3rem;
-            text-align: center;
-        }
-
-        .trust-item {
-            padding: 1.5rem;
-        }
-
-        .trust-number {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--primary-gold);
-            margin-bottom: 0.5rem;
-        }
-
-        .trust-label {
-            font-size: 0.95rem;
-            color: var(--text-secondary);
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Services Section */
-        .services {
-            padding: 120px 0;
-            background: var(--dark-bg);
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 3rem;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 5rem;
-        }
-
-        .section-badge {
-            display: inline-block;
-            background: rgba(201, 169, 110, 0.1);
-            border: 1px solid var(--primary-gold);
-            color: var(--primary-gold);
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            margin-bottom: 1.5rem;
-        }
-
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            color: var(--text-primary);
-            line-height: 1.2;
-        }
-
-        .section-subtitle {
-            font-size: 1.2rem;
-            color: var(--text-secondary);
-            max-width: 700px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-            gap: 2.5rem;
-        }
-
-        .service-card {
-            background: var(--card-bg);
-            padding: 3rem 2.5rem;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card::before {
-            content: '';
+        .hero-bg {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, var(--primary-gold), var(--secondary-gold));
-            transform: scaleX(0);
-            transition: transform 0.4s ease;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(10, 26, 42, 0.85), rgba(30, 136, 229, 0.7)), url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center;
+            background-size: cover;
+            z-index: -1;
         }
 
-        .service-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .service-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--primary-gold);
-            background: linear-gradient(135deg, var(--card-bg) 0%, rgba(201, 169, 110, 0.05) 100%);
-        }
-
-        .service-header {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 2rem;
-        }
-
-        .service-icon {
-            font-size: 2.5rem;
-            color: var(--primary-gold);
-            margin-right: 1.5rem;
-            margin-top: 0.5rem;
-        }
-
-        .service-info h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.6rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: var(--text-primary);
-        }
-
-        .service-category {
-            font-size: 0.85rem;
-            color: var(--primary-gold);
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .service-description {
-            color: var(--text-secondary);
-            line-height: 1.7;
-            margin-bottom: 2rem;
-        }
-
-        .service-features {
-            list-style: none;
-        }
-
-        .service-features li {
-            display: flex;
-            align-items: center;
-            margin-bottom: 0.8rem;
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-        }
-
-        .service-features i {
-            color: var(--primary-gold);
-            margin-right: 0.8rem;
-            font-size: 0.8rem;
-        }
-
-        /* Package Section */
-        .packages {
-            padding: 120px 0;
-            background: var(--card-bg);
-        }
-
-        .packages-grid {
+        .hero-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
-            margin-top: 4rem;
-        }
-
-        .package-card {
-            background: var(--dark-bg);
-            padding: 3rem 2.5rem;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-            text-align: center;
-            position: relative;
-            transition: all 0.4s ease;
-        }
-
-        .package-card.featured {
-            border-color: var(--primary-gold);
-            transform: scale(1.05);
-        }
-
-        .package-card.featured::before {
-            content: 'Most Popular';
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--primary-gold);
-            color: var(--darker-bg);
-            padding: 6px 20px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .package-name {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
-        }
-
-        .package-price {
-            font-size: 0.95rem;
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
-        }
-
-        .package-features {
-            list-style: none;
-            margin-bottom: 2.5rem;
-        }
-
-        .package-features li {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1rem;
-            color: var(--text-secondary);
-        }
-
-        .package-features i {
-            color: var(--primary-gold);
-            margin-right: 0.8rem;
-            font-size: 0.8rem;
-        }
-
-        /* Testimonials */
-        .testimonials {
-            padding: 120px 0;
-            background: var(--dark-bg);
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 3rem;
-            margin-top: 4rem;
-        }
-
-        .testimonial-card {
-            background: var(--card-bg);
-            padding: 3rem 2.5rem;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-            position: relative;
-        }
-
-        .testimonial-quote {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
-            font-style: italic;
-        }
-
-        .testimonial-author {
-            display: flex;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
             align-items: center;
         }
 
-        .author-info h4 {
-            color: var(--text-primary);
-            font-weight: 600;
-            margin-bottom: 0.3rem;
+        .hero-text {
+            color: white;
         }
 
-        .author-info p {
-            color: var(--text-muted);
+        .hero-text .welcome {
             font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--accent-gold);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
         }
 
-        .testimonial-rating {
-            color: var(--primary-gold);
+        .hero-text h1 {
+            margin-bottom: 20px;
+            font-size: 2.2rem;
+        }
+
+        .hero-text p {
+            font-size: 1rem;
+            margin-bottom: 25px;
+            opacity: 0.9;
+            max-width: 100%;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .hero-card {
+            background: var(--glass-bg-light);
+            backdrop-filter: blur(var(--glass-blur));
+            border-radius: var(--border-radius);
+            padding: 25px;
+            border: 1px solid var(--glass-border-light);
+            box-shadow: var(--glass-shadow-light);
+            color: var(--text-light);
+        }
+
+        body.dark .hero-card {
+            background: var(--glass-bg-dark);
+            border: 1px solid var(--glass-border-dark);
+            box-shadow: var(--glass-shadow-dark);
+            color: var(--text-dark);
+        }
+
+        .hero-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
             font-size: 1.2rem;
-            margin-left: auto;
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: 120px 0;
-            background: var(--card-bg);
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5rem;
-            align-items: start;
-            margin-top: 4rem;
         }
 
         .contact-info {
-            padding-right: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
         }
 
         .contact-item {
             display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-item .icon {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: rgba(30, 136, 229, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-blue);
+            font-size: 0.9rem;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: var(--muted-light);
+            margin-bottom: 20px;
+        }
+
+        body.dark .about-text p {
+            color: var(--muted-dark);
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .feature {
+            display: flex;
             align-items: flex-start;
-            margin-bottom: 3rem;
-            padding: 2rem;
-            background: var(--dark-bg);
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-            transition: all 0.3s ease;
+            gap: 10px;
         }
 
-        .contact-item:hover {
-            transform: translateX(8px);
-            border-color: var(--primary-gold);
+        .feature .icon {
+            color: var(--primary-blue);
+            font-size: 1rem;
+            margin-top: 3px;
         }
 
-        .contact-item i {
+        .about-image {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: var(--transition);
+        }
+
+        .about-image:hover {
+            transform: perspective(1000px) rotateY(0);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .about-image:hover img {
+            transform: scale(1.03);
+        }
+
+        /* Services Section */
+        .services {
+            background: var(--glass-bg-light);
+            backdrop-filter: blur(var(--glass-blur));
+        }
+
+        body.dark .services {
+            background: var(--glass-bg-dark);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        body.dark .service-card {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(30, 136, 229, 0.15);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 18px;
+            color: white;
             font-size: 1.5rem;
-            color: var(--primary-gold);
-            margin-right: 1.5rem;
-            margin-top: 0.3rem;
-            width: 25px;
         }
 
-        .contact-details h4 {
-            color: var(--text-primary);
-            font-weight: 600;
-            margin-bottom: 0.5rem;
+        .service-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 12px;
+            font-size: 1.3rem;
+        }
+
+        .service-card p {
+            color: var(--muted-light);
+            margin-bottom: 18px;
+            flex-grow: 1;
+        }
+
+        body.dark .service-card p {
+            color: var(--muted-dark);
+        }
+
+        .service-image {
+            width: 100%;
+            height: 180px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: auto;
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-image img {
+            transform: scale(1.05);
+        }
+
+        /* Portfolio Section */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .portfolio-item {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            height: 250px;
+            transition: var(--transition);
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(10, 26, 42, 0.9), transparent);
+            color: white;
+            padding: 20px;
+            transform: translateY(100%);
+            transition: var(--transition);
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            transform: translateY(0);
+        }
+
+        .portfolio-overlay h3 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .portfolio-overlay p {
+            font-size: 0.8rem;
+            opacity: 0.9;
+            margin-bottom: 0;
+        }
+
+        /* Reviews Section */
+        .reviews {
+            background: var(--glass-bg-light);
+            backdrop-filter: blur(var(--glass-blur));
+        }
+
+        body.dark .reviews {
+            background: var(--glass-bg-dark);
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .review-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        body.dark .review-card {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(30, 136, 229, 0.1);
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 18px;
+        }
+
+        .reviewer-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .reviewer-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .reviewer-details h4 {
+            margin-bottom: 5px;
+            color: var(--primary-blue);
             font-size: 1.1rem;
         }
 
-        .contact-details p {
-            color: var(--text-secondary);
-            line-height: 1.6;
+        .reviewer-details p {
+            margin-bottom: 0;
+            font-size: 0.85rem;
+            color: var(--muted-light);
+        }
+
+        body.dark .reviewer-details p {
+            color: var(--muted-dark);
+        }
+
+        .rating {
+            display: flex;
+            gap: 3px;
+        }
+
+        .rating i {
+            color: var(--accent-gold);
+            font-size: 0.9rem;
+        }
+
+        .review-text {
+            color: var(--muted-light);
+            font-style: italic;
+            position: relative;
+            padding-left: 18px;
+            font-size: 0.95rem;
+        }
+
+        body.dark .review-text {
+            color: var(--muted-dark);
+        }
+
+        .review-text::before {
+            content: '"';
+            position: absolute;
+            left: 0;
+            top: -10px;
+            font-size: 2.5rem;
+            color: var(--primary-blue-light);
+            opacity: 0.3;
+            font-family: Georgia, serif;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
         }
 
         .contact-form {
-            background: var(--dark-bg);
-            padding: 3rem;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
+            background: var(--glass-bg-light);
+            backdrop-filter: blur(var(--glass-blur));
+            border-radius: var(--border-radius);
+            padding: 30px;
+            border: 1px solid var(--glass-border-light);
+            box-shadow: var(--glass-shadow-light);
+        }
+
+        body.dark .contact-form {
+            background: var(--glass-bg-dark);
+            border: 1px solid var(--glass-border-dark);
+            box-shadow: var(--glass-shadow-dark);
+        }
+
+        .contact-form h3 {
+            color: var(--primary-blue);
+            margin-bottom: 20px;
         }
 
         .form-group {
-            margin-bottom: 2rem;
+            margin-bottom: 18px;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 0.8rem;
-            color: var(--text-primary);
-            font-weight: 500;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--primary-blue);
             font-size: 0.95rem;
         }
 
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
+        .form-control {
             width: 100%;
-            padding: 14px 16px;
-            border: 2px solid var(--border-color);
+            padding: 12px 14px;
             border-radius: 8px;
-            background: var(--card-bg);
-            color: var(--text-primary);
-            font-size: 1rem;
-            font-family: 'Inter', sans-serif;
-            transition: all 0.3s ease;
+            border: 1px solid var(--glass-border-light);
+            background: rgba(255, 255, 255, 0.7);
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            color: var(--text-light);
         }
 
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
+        body.dark .form-control {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border-dark);
+            color: var(--text-dark);
+        }
+
+        .form-control:focus {
             outline: none;
-            border-color: var(--primary-gold);
-            background: var(--dark-bg);
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.2);
         }
 
-        .form-group textarea {
+        textarea.form-control {
+            min-height: 100px;
             resize: vertical;
-            min-height: 120px;
         }
 
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .info-card {
+            background: var(--glass-bg-light);
+            backdrop-filter: blur(var(--glass-blur));
+            border-radius: var(--border-radius);
+            padding: 25px;
+            border: 1px solid var(--glass-border-light);
+            box-shadow: var(--glass-shadow-light);
+            transition: var(--transition);
+        }
+
+        body.dark .info-card {
+            background: var(--glass-bg-dark);
+            border: 1px solid var(--glass-border-dark);
+            box-shadow: var(--glass-shadow-dark);
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .info-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1.2rem;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .info-item .icon {
+            color: var(--primary-blue);
+            margin-top: 3px;
+            font-size: 0.9rem;
+        }
+
+        .hours-list {
+            list-style: none;
+        }
+
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--glass-border-light);
+            font-size: 0.9rem;
+        }
+
+        body.dark .hours-list li {
+            border-bottom: 1px solid var(--glass-border-dark);
+        }
+
+        .map-container {
+            height: 200px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            margin-top: 18px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-content h2 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 2rem;
+        }
+
+        .cta-content p {
+            font-size: 1rem;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-buttons .btn {
+            background: white;
+            color: var(--primary-blue);
+        }
+
+        .cta-buttons .btn-secondary {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        .cta-buttons .btn-secondary:hover {
+            background: white;
+            color: var(--primary-blue);
         }
 
         /* Footer */
-        .footer {
-            background: var(--darker-bg);
-            padding: 4rem 0 2rem;
-            border-top: 1px solid var(--border-color);
+        footer {
+            background: var(--glass-bg-light);
+            color: var(--text-light);
+            padding: 60px 0 25px;
+            border-top: 1px solid var(--glass-border-light);
+        }
+
+        body.dark footer {
+            background: var(--glass-bg-dark);
+            border-top: 1px solid var(--glass-border-dark);
+            color: var(--text-dark);
         }
 
         .footer-content {
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 3rem;
-            margin-bottom: 3rem;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
         }
 
         .footer-brand {
-            max-width: 350px;
+            margin-bottom: 18px;
         }
 
-        .footer-logo {
+        .footer-brand .logo {
             display: flex;
             align-items: center;
-            margin-bottom: 1.5rem;
-            color: var(--primary-gold);
-            font-size: 1.4rem;
-            font-weight: 600;
+            gap: 8px;
+            margin-bottom: 15px;
         }
 
-        .footer-logo i {
-            margin-right: 0.8rem;
-            font-size: 1.8rem;
+        .footer-brand .logo-img {
+            width: 35px;
+            height: 35px;
         }
 
-        .footer-description {
-            color: var(--text-secondary);
-            line-height: 1.7;
-            margin-bottom: 2rem;
+        .footer-brand h3 {
+            font-size: 1.3rem;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .footer-section h4 {
-            color: var(--text-primary);
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 0.8rem;
-        }
-
-        .footer-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-links a:hover {
-            color: var(--primary-gold);
+        .footer-brand p {
+            opacity: 0.8;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
         }
 
         .social-links {
             display: flex;
-            gap: 1rem;
+            gap: 12px;
         }
 
-        .social-links a {
+        .social-link {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--glass-bg-light);
+            border: 1px solid var(--glass-border-light);
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 45px;
-            height: 45px;
-            background: var(--card-bg);
-            color: var(--text-secondary);
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            border: 1px solid var(--border-color);
-        }
-
-        .social-links a:hover {
-            background: var(--primary-gold);
-            color: var(--darker-bg);
-            transform: translateY(-2px);
-        }
-
-        .footer-bottom {
-            padding-top: 2rem;
-            border-top: 1px solid var(--border-color);
-            text-align: center;
-            color: var(--text-muted);
+            color: var(--text-light);
+            transition: var(--transition);
             font-size: 0.9rem;
         }
 
-        /* Responsive Design */
-        @media (max-width: 1200px) {
-            .nav-container,
-            .container {
-                padding: 0 2rem;
-            }
-
-            .hero h1 {
-                font-size: 3.5rem;
-            }
+        body.dark .social-link {
+            background: var(--glass-bg-dark);
+            border: 1px solid var(--glass-border-dark);
+            color: var(--text-dark);
         }
 
-        @media (max-width: 768px) {
-            .nav-menu {
-                position: fixed;
-                top: 80px;
-                left: -100%;
-                width: 100%;
-                height: calc(100vh - 80px);
-                background: var(--dark-bg);
-                flex-direction: column;
-                justify-content: start;
-                align-items: center;
-                padding-top: 3rem;
-                transition: left 0.3s ease;
-                border-top: 1px solid var(--border-color);
-            }
-
-            .nav-menu.active {
-                left: 0;
-            }
-
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            .cta-header {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 2.8rem;
-            }
-
-            .hero-features {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-
-            .contact-info {
-                padding-right: 0;
-            }
-
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .trust-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 2rem;
-            }
-
-            .services-grid,
-            .packages-grid,
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .section-title {
-                font-size: 2.5rem;
-            }
-
-            .nav-container,
-            .container {
-                padding: 0 1.5rem;
-            }
+        .social-link:hover {
+            background: var(--primary-blue);
+            color: white;
+            transform: translateY(-3px);
         }
 
-        /* Scroll animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 0.8s ease;
+        .footer-links h4 {
+            font-size: 1.1rem;
+            margin-bottom: 18px;
+            position: relative;
+            padding-bottom: 8px;
+            color: var(--primary-blue);
         }
 
-        .fade-in.visible {
+        .footer-links h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 35px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--primary-blue-light));
+        }
+
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            opacity: 0.8;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
             opacity: 1;
-            transform: translateY(0);
+            color: var(--primary-blue);
+            padding-left: 5px;
         }
 
-        /* Loading animation */
-        .loading {
+        .footer-contact h4 {
+            font-size: 1.1rem;
+            margin-bottom: 18px;
+            position: relative;
+            padding-bottom: 8px;
+            color: var(--primary-blue);
+        }
+
+        .footer-contact h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 35px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--primary-blue-light));
+        }
+
+        .footer-contact p {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        .footer-contact .icon {
+            margin-top: 3px;
+            color: var(--primary-blue);
+            font-size: 0.9rem;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 25px;
+            border-top: 1px solid var(--glass-border-light);
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+
+        body.dark .footer-bottom {
+            border-top: 1px solid var(--glass-border-dark);
+        }
+
+        /* Mobile Navigation */
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 300px;
+            height: 100vh;
+            background: var(--glass-bg-light);
+            backdrop-filter: blur(var(--glass-blur));
+            z-index: 2000;
+            padding: 80px 30px 30px;
+            transition: var(--transition);
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        body.dark .mobile-nav {
+            background: var(--glass-bg-dark);
+        }
+
+        .mobile-nav.active {
+            right: 0;
+        }
+
+        .mobile-nav ul {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .mobile-nav a {
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: block;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--glass-border-light);
+        }
+
+        body.dark .mobile-nav a {
+            border-bottom: 1px solid var(--glass-border-dark);
+        }
+
+        .mobile-nav-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary-blue);
+        }
+
+        .overlay {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: var(--darker-bg);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            transition: opacity 0.5s ease;
-        }
-
-        .loading.hidden {
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1999;
             opacity: 0;
-            pointer-events: none;
+            visibility: hidden;
+            transition: var(--transition);
         }
 
-        .loader {
-            width: 60px;
-            height: 60px;
-            border: 4px solid rgba(201, 169, 110, 0.2);
-            border-top: 4px solid var(--primary-gold);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
         }
 
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 30px;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+            }
         }
 
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            h3 {
+                font-size: 1.3rem;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+            
+            nav ul {
+                display: none;
+            }
+            
+            .mobile-toggle {
+                display: block;
+            }
+            
+            .header-actions .btn {
+                display: none;
+            }
+            
+            .hero {
+                padding: 90px 0 60px;
+            }
+            
+            .hero-text h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero-actions {
+                justify-content: center;
+            }
+            
+            .about-features {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 15px;
+            }
+            
+            .reviews-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .cta-buttons .btn {
+                width: 100%;
+                max-width: 250px;
+            }
         }
 
-        ::-webkit-scrollbar-track {
-            background: var(--card-bg);
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            section {
+                padding: 50px 0;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+            }
+            
+            .hero {
+                padding: 80px 0 50px;
+                min-height: auto;
+            }
+            
+            .hero-text h1 {
+                font-size: 1.6rem;
+            }
+            
+            .hero-text p {
+                font-size: 0.9rem;
+            }
+            
+            .hero-actions {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .hero-actions .btn {
+                width: 100%;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .portfolio-item {
+                height: 220px;
+            }
+            
+            .service-image {
+                height: 150px;
+            }
+            
+            .contact-form, .info-card, .hero-card {
+                padding: 20px;
+            }
+            
+            .footer-brand .logo {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+            
+            .cta-content h2 {
+                font-size: 1.6rem;
+            }
+            
+            .cta-content p {
+                font-size: 0.9rem;
+            }
         }
 
-        ::-webkit-scrollbar-thumb {
-            background: var(--primary-gold);
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--secondary-gold);
+        @media (max-width: 360px) {
+            .logo-text .company-name {
+                font-size: 1.1rem;
+            }
+            
+            .hero-text h1 {
+                font-size: 1.4rem;
+            }
+            
+            h2 {
+                font-size: 1.4rem;
+            }
+            
+            .service-card, .review-card {
+                padding: 18px;
+            }
         }
     </style>
-</head>
+<style>
+/* Portfolio Toggle Animation */
+#portfolio-wrapper .portfolio-item {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+#portfolio-wrapper.collapsed .portfolio-item:nth-child(n+7) {
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  height: 0;
+  margin: 0;
+  overflow: hidden;
+}
+#see-more-btn {
+  display: block;
+  margin: 30px auto 0;
+  padding: 12px 28px;
+  font-weight: 600;
+  border-radius: 50px;
+}
+</style></head>
 <body>
-    <!-- Loading Screen -->
-    <div class="loading" id="loading">
-        <div class="loader"></div>
-    </div>
+<!-- Background Effect -->
+<div class="bg-effect"></div>
+<!-- Header -->
+<header>
+<div class="container header-container">
+<div class="logo">
+<div class="logo-img">
+<img alt="GTA High Glass Logo" src="https://static.wixstatic.com/media/39abfb_2129aaa2ffa045c6bff55df45f90bc82~mv2.png/v1/fill/w_327,h_314,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202024-06-30%20142006.png"/>
+</div>
+<div class="logo-text">
+<div class="company-name">GTA High Glass</div>
+<div class="tagline">Precision • Elegance • Installation</div>
+</div>
+</div>
+<nav class="desktop-nav">
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#portfolio">Portfolio</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+<div class="header-actions">
+<a class="btn btn-primary" href="#contact">Get Quote</a>
+<div class="theme-toggle" id="theme-toggle">
+<i class="fas fa-moon"></i>
+</div>
+<div class="mobile-toggle" id="mobile-toggle">
+<i class="fas fa-bars"></i>
+</div>
+</div>
+</div>
+</header>
+<!-- Mobile Navigation -->
+<div class="mobile-nav" id="mobile-nav">
+<div class="mobile-nav-close" id="mobile-nav-close">
+<i class="fas fa-times"></i>
+</div>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#portfolio">Portfolio</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</div>
+<div class="overlay" id="overlay"></div>
+<!-- Hero Section -->
+<section class="hero" id="home">
+<div class="hero-bg"></div>
+<div class="container hero-content">
+<div class="hero-text">
+<div class="welcome">WELCOME TO GTA HIGH GLASS</div>
+<h1>Transform Your Space With Premium Glass Solutions</h1>
+<p>Expert craftsmanship and modern design solutions for residential and commercial properties across the Greater Toronto Area.</p>
+<div class="hero-actions">
+<a class="btn btn-primary" href="#portfolio">View Our Work</a>
+<a class="btn btn-secondary" href="#contact">Get Free Quote</a>
+</div>
+</div>
+<div class="hero-card">
+<h3><i class="fas fa-info-circle"></i> Contact Info</h3>
+<div class="contact-info">
+<div class="contact-item">
+<div class="icon">
+<i class="fas fa-phone"></i>
+</div>
+<div>
+<strong>647-571-5490</strong>
+</div>
+</div>
+<div class="contact-item">
+<div class="icon">
+<i class="fas fa-envelope"></i>
+</div>
+<div>
+<strong>gtahighglass@gmail.com</strong>
+</div>
+</div>
+<div class="contact-item">
+<div class="icon">
+<i class="fas fa-map-marker-alt"></i>
+</div>
+<div>
+<strong>Serving Greater Toronto Area</strong>
+</div>
+</div>
+</div>
+<a class="btn btn-primary" href="#contact" style="width: 100%; margin-top: 15px;">Contact Us Today</a>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section id="about">
+<div class="container">
+<div class="section-header">
+<h2>About GTA High Glass</h2>
+<p>With years of experience in premium glass installations, we bring precision and elegance to every project.</p>
+</div>
+<div class="about-content">
+<div class="about-text">
+<h3>Crafting Excellence in Glass</h3>
+<p>At GTA High Glass, we specialize in transforming residential and commercial spaces with custom glass solutions. Our team of skilled professionals combines technical expertise with an eye for design to deliver installations that exceed expectations.</p>
+<p>From initial consultation to final installation, we focus on precision, quality materials, and customer satisfaction. Whether you need a frameless shower enclosure, elegant glass railings, or custom mirrors, we have the expertise to bring your vision to life.</p>
+<div class="about-features">
+<div class="feature">
+<span class="icon"><i class="fas fa-check"></i></span>
+<span>Expert Craftsmanship</span>
+</div>
+<div class="feature">
+<span class="icon"><i class="fas fa-check"></i></span>
+<span>Premium Materials</span>
+</div>
+<div class="feature">
+<span class="icon"><i class="fas fa-check"></i></span>
+<span>Custom Solutions</span>
+</div>
+<div class="feature">
+<span class="icon"><i class="fas fa-check"></i></span>
+<span>Timely Completion</span>
+</div>
+</div>
+<a class="btn btn-primary" href="#contact">Schedule Consultation</a>
+</div>
+<div class="about-image">
+<img alt="Glass installation professional at work" src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1558&amp;q=80"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="services" id="services">
+<div class="container">
+<div class="section-header">
+<h2>Our Services</h2>
+<p>Comprehensive glass solutions for residential and commercial properties</p>
+</div>
+<div class="services-grid">
+<div class="service-card">
+<div class="service-icon">
+<i class="fas fa-shower"></i>
+</div>
+<h3>Shower Enclosures</h3>
+<p>Transform your bathroom with elegant, frameless shower enclosures that create a spacious and modern look while providing durability and easy maintenance.</p>
+<div class="service-image">
+<img alt="Glass shower enclosure" src="https://images.squarespace-cdn.com/content/v1/57ec07a7b8a79bcc0551ea01/1584566837283-UDO8Y3ZL66TJWIC7NW17/Kartak+white+shower.jpg?format=1500w"/>
+</div>
+</div>
+<div class="service-card">
+<div class="service-icon">
+<i class="fas fa-building"></i>
+</div>
+<h3>Glass Railings</h3>
+<p>Enhance safety and aesthetics with our custom glass railings for balconies, staircases, and decks. Perfect for modern residential and commercial spaces.</p>
+<div class="service-image">
+<img alt="Glass railing installation" src="https://specializedstairs.com/wp-content/uploads/2018/06/Dadoed-Glass-Railing2.jpg"/>
+</div>
+</div>
+<div class="service-card">
+<div class="service-icon">
+<i class="fas fa-user-circle"></i>
+</div>
+<h3>Custom Mirrors</h3>
+<p>Add elegance and functionality with our bespoke mirror installations. From bathroom mirrors to decorative wall mirrors, we customize to fit your space perfectly.</p>
+<div class="service-image">
+<img alt="Custom mirror installation" src="https://images-na.ssl-images-amazon.com/images/I/81Vn8sospVL.jpg"/>
+</div>
+</div>
+<div class="service-card">
+<div class="service-icon">
+<i class="fas fa-door-open"></i>
+</div>
+<h3>Office Partitions</h3>
+<p>Create modern, open workspaces with our glass office partitions. Enhance natural light flow while maintaining privacy and acoustic control.</p>
+<div class="service-image">
+<img alt="Glass office partitions" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRYHtixyvOGze0r7wPm9VkEtmBRl0okMtrsg&amp;s"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Section -->
+<!-- Portfolio Section -->
+<section id="portfolio">
+<div class="container">
+<div class="section-header">
+<h2>Our Portfolio</h2>
+<p>Explore our recent projects and see how we've transformed spaces with premium glass installations</p>
+</div>
+<div id="portfolio-wrapper"><div class="portfolio-grid">
+<div class="portfolio-item">
+<img alt="Glass installation project 1" src="https://static.wixstatic.com/media/39abfb_62875ceac7404c09bb2ff78bd9aca713~mv2.jpeg/v1/fill/w_680,h_606,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5794.jpeg"/>
+<div class="portfolio-overlay">
+<h3>Modern Shower Enclosure</h3>
+<p>Frameless design with custom fittings</p>
+</div>
+</div>
+<div class="portfolio-item">
+<img alt="Glass installation project 2" src="https://static.wixstatic.com/media/39abfb_ade0f875958a4fe1ac63c1f1eefe3c9f~mv2.jpeg/v1/fill/w_680,h_606,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5795.jpeg"/>
+<div class="portfolio-overlay">
+<h3>Bathroom Glass Installation</h3>
+<p>Sturdy and elegant safety solution</p>
+</div>
+</div>
+<div class="portfolio-item">
+<img alt="Glass installation project 3" src="https://static.wixstatic.com/media/39abfb_b0ea1553588b484cb8e30dfb701bef7d~mv2.jpeg/v1/fill/w_680,h_606,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5793.jpeg"/>
+<div class="portfolio-overlay">
+<h3>Glass door Installation</h3>
+<p>Creating open yet defined workspaces</p>
+</div>
+</div>
+<div class="portfolio-item">
+<img alt="Glass installation project 4" src="https://static.wixstatic.com/media/39abfb_ecc50d5ea47741afb9f26044f1497c63~mv2.jpeg/v1/fill/w_680,h_606,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5792.jpeg"/>
+<div class="portfolio-overlay">
+<h3>Custom Bathroom Mirror</h3>
+<p>Precision cut for perfect fit</p>
+</div>
+</div>
+<div class="portfolio-item">
+<img alt="Glass installation project 5" src="https://static.wixstatic.com/media/39abfb_5e3a4b7372cc4b15a181d7de1b325d84~mv2.jpeg/v1/fill/w_680,h_606,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5797.jpeg"/>
+<div class="portfolio-overlay">
+<h3>Bathroom glass doors</h3>
+<p>Combining safety with modern aesthetics</p>
+</div>
+</div>
+<div class="portfolio-item">
+<img alt="Glass installation project 6" src="https://static.wixstatic.com/media/39abfb_09211adef9ea413fab889e65929d1ba7~mv2.jpeg/v1/fill/w_680,h_606,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5791.jpeg"/>
+<div class="portfolio-overlay">
+<h3>Glass Windows Installation</h3>
+<p>Clarity bringing luxury to your walls</p>
+</div>
+</div>
+<div class="portfolio-item">
+<img alt="Glass installation project 7" src="https://i.postimg.cc/mknZfGHh/7.jpg"/>
+<div class="portfolio-overlay">
+<h3>Glass Shower Partition</h3>
+<p>Sleek transparent walls for a spacious, modern bath</p>
+</div>
+</div>
+<div class="portfolio-item">
+<img alt="Glass installation project 8" src="https://i.postimg.cc/rmKFhmdV/8.jpg"/>
+<div class="portfolio-overlay">
+<h3>Bathroom Glass Divider</h3>
+<p>Crystal-clear panels adding elegance and openness</p>
+</div>
+</div>
+<div class="portfolio-item">
+<img alt="Glass installation project 9" src="https://i.postimg.cc/XvvVJJkp/9.jpg"/>
+<div class="portfolio-overlay">
+<h3>Bathroom Glass Partition</h3>
+<p>Elegant clear walls for a modern, airy shower space</p>
+</div>
+</div>
+<div class="portfolio-item">
+<img alt="Glass installation project 10" src="https://i.postimg.cc/KYCd2v9C/10.jpg"/>
+<div class="portfolio-overlay">
+<h3>Shower Glass Enclosure</h3>
+<p>Frameless clarity bringing luxury to your bathroom</p>
+</div>
+</div>
+<div class="portfolio-item">
+<img alt="Glass installation project 11" src="https://i.postimg.cc/k4rhHYGP/11.jpg"/>
+<div class="portfolio-overlay">
+<h3>Glass Shower Wall</h3>
+<p>Minimalist design that enhances light and space</p>
+</div>
+</div>
+<div class="portfolio-item">
+<img alt="Glass installation project 12" src="https://i.postimg.cc/d0C5GRB2/12.jpg"/>
+<div class="portfolio-overlay">
+<h3>Transparent Shower Panel</h3>
+<p>Crystal finish that expands your bathroom’s look</p>
+</div>
+</div>
+<div class="portfolio-item">
+<img alt="Glass installation project 13" src="https://i.postimg.cc/HxH95qj0/13.jpg"/>
+<div class="portfolio-overlay">
+<h3>Frameless Shower Glass</h3>
+<p>Modern simplicity that defines your bathing space</p>
+</div>
+</div>
+<div class="portfolio-item">
+<img alt="Glass installation project 14" src="https://i.postimg.cc/XJQd5XTs/14.jpg"/>
+<div class="portfolio-overlay">
+<h3>Toilet Glass Partition</h3>
+<p>Smart division with light and openness</p>
+</div>
+</div>
+<div class="portfolio-item">
+<img alt="Glass installation project 15" src="https://i.postimg.cc/7LN2vfYJ/15.jpg"/>
+<div class="portfolio-overlay">
+<h3>Bathroom Glass Design</h3>
+<p>Crystal-clear views that invite attention</p>
+</div>
+</div>
+<div class="portfolio-item">
+<img alt="Glass installation project 16" src="https://i.postimg.cc/vH6xYPZs/16.jpg"/>
+<div class="portfolio-overlay">
+<h3>Interior Glass Wall</h3>
+<p>Modern separation with elegant transparency</p>
+</div>
+</div>
+<div class="portfolio-item">
+<img alt="Glass installation project 17" src="https://i.postimg.cc/63yndBtv/17.jpg"/>
+<div class="portfolio-overlay">
+<h3>Frameless Glass Divider</h3>
+<p>Seamless clarity enhancing every corner</p>
+</div>
+</div>
+<div class="portfolio-item">
+<img alt="Glass installation project 18" src="https://i.postimg.cc/XvZYLqB3/18.jpg"/>
+<div class="portfolio-overlay">
+<h3>Restroom Partition</h3>
+<p>Privacy with a touch of transparency</p>
+</div>
+</div>
+<div class="portfolio-item">
+<img alt="Glass installation project 19" src="https://i.postimg.cc/J4P7WZbR/19.jpg"/>
+<div class="portfolio-overlay">
+<h3>Tempered Glass Wall</h3>
+<p>Durable and sleek solution for modern spaces</p>
+</div>
+</div>
+<div class="portfolio-item">
+<img alt="Glass installation project 20" src="https://i.postimg.cc/1trhr1Hb/20.jpg"/>
+<div class="portfolio-overlay">
+<h3>Custom Glass Installation</h3>
+<p>Tailored craftsmanship for every project</p>
+</div>
+</div>
+<div class="portfolio-item">
+<img alt="Glass installation project 21" src="https://i.postimg.cc/LXRGX0pb/21.jpg"/>
+<div class="portfolio-overlay">
+<h3>Glass bathroom Front</h3>
+<p>Clean lines bringing light into the workspace</p>
+</div>
+</div>
+<div class="portfolio-item">
+<img alt="Glass installation project 22" src="https://i.postimg.cc/7L1QpM2B/22.jpg"/>
+<div class="portfolio-overlay">
+<h3>Retail Glass Display</h3>
+<p>Elegant visibility that highlights your brand</p>
+</div>
+</div>
+<div class="portfolio-item">
+<img alt="Glass installation project 23" src="https://i.postimg.cc/1zSvcnj3/23.jpg"/>
+<div class="portfolio-overlay">
+<h3>Washroom Glass Partition</h3>
+<p>Open and inviting design for professional spaces</p>
+</div>
+</div>
+<div class="portfolio-item">
+<img alt="Glass installation project 24" src="https://i.postimg.cc/brZgNQsg/24.jpg"/>
+<div class="portfolio-overlay">
+<h3>Clean Glass Wall</h3>
+<p>Minimal look with maximum sophistication</p>
+</div>
+</div>
+<div class="portfolio-item">
+<img alt="Glass installation project 25" src="https://i.postimg.cc/xjZgpF4F/25.jpg"/>
+<div class="portfolio-overlay">
+<h3>Framed Glass Partition</h3>
+<p>Stylish strength blending function and form</p>
+</div>
+</div>
+<div class="portfolio-item">
+<img alt="Glass installation project 26" src="https://i.postimg.cc/FKhxJtYY/26.jpg"/>
+<div class="portfolio-overlay">
+<h3>Restroom Divider Glass</h3>
+<p>Effortless separation without blocking light</p>
+</div>
+</div>
+<div class="portfolio-item">
+<img alt="Glass installation project 27" src="https://i.postimg.cc/qgfsJWf4/27.jpg"/>
+<div class="portfolio-overlay">
+<h3>Modern Glass Workstation</h3>
+<p>Bright, airy, and beautifully functional</p>
+</div>
+</div>
+<div class="portfolio-item">
+<img alt="Glass installation project 28" src="https://i.postimg.cc/XvNz6BcR/28.jpg"/>
+<div class="portfolio-overlay">
+<h3>Toilet Glass Interior</h3>
+<p>Luxury transparency with professional charm</p>
+</div>
+</div>
+</div><button class="btn btn-primary" id="see-more-btn">See More</button></div>
+</div>
+</section>
+<!-- Reviews Section -->
+<section class="reviews" id="reviews">
+<div class="container">
+<div class="section-header">
+<h2>Customer Reviews</h2>
+<p>See what our clients say about our premium glass installation services</p>
+</div>
+<div class="reviews-grid">
+<div class="review-card">
+<div class="review-header">
+<div class="reviewer-info">
+<div class="reviewer-avatar">JS</div>
+<div class="reviewer-details">
+<h4>Jennifer Smith</h4>
+<p>Condominium Renovation</p>
+</div>
+</div>
+<div class="rating">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div>
+</div>
+<div class="review-text">
+                        GTA High Glass transformed my bathroom with a stunning frameless shower enclosure. The attention to detail was exceptional, and the installation was completed ahead of schedule. My bathroom now looks like it's from a luxury magazine. Highly recommend their services!
+                    </div>
+</div>
+<div class="review-card">
+<div class="review-header">
+<div class="reviewer-info">
+<div class="reviewer-avatar">MR</div>
+<div class="reviewer-details">
+<h4>Michael Roberts</h4>
+<p>Office Renovation</p>
+</div>
+</div>
+<div class="rating">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div>
+</div>
+<div class="review-text">
+                        We hired GTA High Glass for glass partitions in our new downtown office. The team was professional, punctual, and the quality of work exceeded our expectations. The partitions have completely transformed our workspace, making it feel more open and modern.
+                    </div>
+</div>
+<div class="review-card">
+<div class="review-header">
+<div class="reviewer-info">
+<div class="reviewer-avatar">SC</div>
+<div class="reviewer-details">
+<h4>Sarah Chen</h4>
+<p>Residential Balcony</p>
+</div>
+</div>
+<div class="rating">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div>
+</div>
+<div class="review-text">
+                        The glass railing installation for our balcony was flawless. The team was careful, clean, and respectful of our home. The finished product is not only beautiful but feels incredibly secure. We've received so many compliments from neighbors!
+                    </div>
+</div>
+<div class="review-card">
+<div class="review-header">
+<div class="reviewer-info">
+<div class="reviewer-avatar">DW</div>
+<div class="reviewer-details">
+<h4>David Wilson</h4>
+<p>Custom Mirror Installation</p>
+</div>
+</div>
+<div class="rating">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div>
+</div>
+<div class="review-text">
+                        I needed custom mirrors for my boutique hotel, and GTA High Glass delivered perfection. The mirrors were precisely cut to fit our unique spaces, and the installation was seamless. The team was professional and completed the project on time and within budget.
+                    </div>
+</div>
+<div class="review-card">
+<div class="review-header">
+<div class="reviewer-info">
+<div class="reviewer-avatar">AP</div>
+<div class="reviewer-details">
+<h4>Amanda Patel</h4>
+<p>Staircase Railing Project</p>
+</div>
+</div>
+<div class="rating">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div>
+</div>
+<div class="review-text">
+                        Our staircase glass railing has completely transformed the look of our home. The team at GTA High Glass was incredibly knowledgeable and helped us choose the perfect style. The installation was quick and clean, and we couldn't be happier with the results!
+                    </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section id="contact">
+<div class="container">
+<div class="section-header">
+<h2>Contact Us</h2>
+<p>Get in touch for a free consultation and quote</p>
+</div>
+<div class="contact-container">
+<div class="contact-form">
+<h3>Request a Quote</h3>
+<form id="contact-form">
+<div class="form-group">
+<label for="name">Full Name</label>
+<input class="form-control" id="name" required="" type="text"/>
+</div>
+<div class="form-group">
+<label for="email">Email Address</label>
+<input class="form-control" id="email" required="" type="email"/>
+</div>
+<div class="form-group">
+<label for="phone">Phone Number</label>
+<input class="form-control" id="phone" type="tel"/>
+</div>
+<div class="form-group">
+<label for="service">Service Interested In</label>
+<select class="form-control" id="service">
+<option value="">Select a service</option>
+<option value="showers">Shower Enclosures</option>
+<option value="railings">Glass Railings</option>
+<option value="mirrors">Custom Mirrors</option>
+<option value="partitions">Office Partitions</option>
+<option value="other">Other</option>
+</select>
+</div>
+<div class="form-group">
+<label for="message">Project Details</label>
+<textarea class="form-control" id="message" rows="5"></textarea>
+</div>
+<button class="btn btn-primary" style="width: 100%;" type="submit">Send Message</button>
+</form>
+</div>
+<div class="contact-info">
+<div class="info-card">
+<h3><i class="fas fa-address-card"></i> Contact Information</h3>
+<div class="info-item">
+<span class="icon"><i class="fas fa-phone"></i></span>
+<span><strong>Phone:</strong> 647-571-5490</span>
+</div>
+<div class="info-item">
+<span class="icon"><i class="fas fa-envelope"></i></span>
+<span><strong>Email:</strong> gtahighglass@gmail.com</span>
+</div>
+<div class="info-item">
+<span class="icon"><i class="fas fa-map-marker-alt"></i></span>
+<span><strong>Service Area:</strong> Greater Toronto Area</span>
+</div>
+</div>
+<div class="info-card">
+<h3><i class="fas fa-clock"></i> Business Hours</h3>
+<ul class="hours-list">
+<li><span>Monday - Friday</span> <span>8:00 AM - 5:00 PM</span></li>
+<li><span>Saturday</span> <span>9:00 AM - 3:00 PM</span></li>
+<li><span>Sunday</span> <span>9:00 AM - 2:00 PM</span></li>
+</ul>
+</div>
+<div class="map-container">
+<iframe allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d184552.5728978346!2d-79.51814050000001!3d43.7181558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb90d7c63ba5%3A0x323555502ab4c477!2sToronto%2C%20ON!5e0!3m2!1sen!2sca!4v1695849872459!5m2!1sen!2sca"></iframe>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="cta-section">
+<div class="container cta-content">
+<h2>Ready to Transform Your Space?</h2>
+<p>Contact GTA High Glass today for a free consultation and quote. Let us bring clarity and sophistication to your project.</p>
+<div class="cta-buttons">
+<a class="btn" href="#contact">Get Free Quote</a>
+<a class="btn btn-secondary" href="tel:6475715490">Call Now</a>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer>
+<div class="container">
+<div class="footer-content">
+<div class="footer-brand">
+<div class="logo">
+<div class="logo-img">
+<img alt="GTA High Glass Logo" src="https://static.wixstatic.com/media/39abfb_2129aaa2ffa045c6bff55df45f90bc82~mv2.png/v1/fill/w_327,h_314,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202024-06-30%20142006.png"/>
+</div>
+<h3>GTA High Glass</h3>
+</div>
+<p>Premium glass installations in Toronto. Transforming spaces with precision, elegance, and expert craftsmanship.</p>
+<div class="social-links">
+<a class="social-link" href="#">
+<i class="fab fa-facebook-f"></i>
+</a>
+<a class="social-link" href="#">
+<i class="fab fa-instagram"></i>
+</a>
+<a class="social-link" href="#">
+<i class="fab fa-twitter"></i>
+</a>
+</div>
+</div>
+<div class="footer-links">
+<h4>Quick Links</h4>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About Us</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#portfolio">Portfolio</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</div>
+<div class="footer-contact">
+<h4>Contact Info</h4>
+<p><span class="icon"><i class="fas fa-phone"></i></span> 647-571-5490</p>
+<p><span class="icon"><i class="fas fa-envelope"></i></span> gtahighglass@gmail.com</p>
+<p><span class="icon"><i class="fas fa-map-marker-alt"></i></span> Serving Greater Toronto Area</p>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2023 GTA High Glass. Made by TYF Sadik and Tahmid Ahnaf. All rights reserved.</p>
+</div>
+</div>
+</footer>
 
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav-container">
-            <a href="#home" class="logo">
-                <i class="fas fa-crown"></i>
-                <div class="logo-text">
-                    <div class="logo-main">Crown Shisha</div>
-                    <div class="logo-sub">Catering</div>
-                </div>
-            </a>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#packages">Packages</a></li>
-                <li><a href="#testimonials">Reviews</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="header-actions">
-                <div class="theme-toggle" id="themeToggle"></div>
-                <a href="#contact" class="cta-header">Get Quote</a>
-            </div>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </button>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content fade-in">
-            <div class="hero-badge">Premium Event Catering</div>
-            <div class="crown-icon">
-                <i class="fas fa-crown"></i>
-            </div>
-            <h1>Crown Shisha Catering</h1>
-            <p class="hero-subtitle">Professional shisha catering services for corporate events, weddings, and private functions throughout Toronto GTA.</p>
+<script type="text/javascript">
+        // Theme toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggle = document.getElementById('theme-toggle');
+            const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
             
-            <div class="hero-features">
-                <div class="hero-feature">
-                    <i class="fas fa-shield-alt"></i>
-                    <span>Licensed & Insured</span>
-                </div>
-                <div class="hero-feature">
-                    <i class="fas fa-users"></i>
-                    <span>Professional Staff</span>
-                </div>
-                <div class="hero-feature">
-                    <i class="fas fa-clock"></i>
-                    <span>24/7 Service</span>
-                </div>
-            </div>
+            // Check for saved theme or prefered scheme
+            const currentTheme = localStorage.getItem('theme') || 
+                                (prefersDarkScheme.matches ? 'dark' : 'light');
             
-            <div class="cta-buttons">
-                <a href="#contact" class="btn btn-primary">Request Consultation</a>
-                <a href="#services" class="btn btn-secondary">View Services</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Trust Indicators -->
-    <section class="trust-section">
-        <div class="trust-grid fade-in">
-            <div class="trust-item">
-                <div class="trust-number">500+</div>
-                <div class="trust-label">Events Catered</div>
-            </div>
-            <div class="trust-item">
-                <div class="trust-number">98%</div>
-                <div class="trust-label">Client Satisfaction</div>
-            </div>
-            <div class="trust-item">
-                <div class="trust-number">5+</div>
-                <div class="trust-label">Years Experience</div>
-            </div>
-            <div class="trust-item">
-                <div class="trust-number">24/7</div>
-                <div class="trust-label">Customer Support</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="container">
-            <div class="section-header fade-in">
-                <div class="section-badge">Our Expertise</div>
-                <h2 class="section-title">Professional Catering Services</h2>
-                <p class="section-subtitle">Comprehensive shisha catering solutions tailored to your event requirements with the highest standards of service and quality.</p>
-            </div>
-            
-            <div class="services-grid">
-                <div class="service-card fade-in">
-                    <div class="service-header">
-                        <div class="service-icon">
-                            <i class="fas fa-building"></i>
-                        </div>
-                        <div class="service-info">
-                            <div class="service-category">Business Events</div>
-                            <h3>Corporate Catering</h3>
-                        </div>
-                    </div>
-                    <p class="service-description">Professional shisha catering for corporate events, product launches, networking functions, and company celebrations with discrete, upscale service.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i>Executive event planning</li>
-                        <li><i class="fas fa-check"></i>Professional uniformed staff</li>
-                        <li><i class="fas fa-check"></i>Premium equipment setup</li>
-                        <li><i class="fas fa-check"></i>Flexible service packages</li>
-                    </ul>
-                </div>
-
-                <div class="service-card fade-in">
-                    <div class="service-header">
-                        <div class="service-icon">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <div class="service-info">
-                            <div class="service-category">Wedding Events</div>
-                            <h3>Wedding Catering</h3>
-                        </div>
-                    </div>
-                    <p class="service-description">Create unforgettable memories with our elegant wedding shisha service. We provide sophisticated setups that complement your special day perfectly.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i>Elegant presentation setups</li>
-                        <li><i class="fas fa-check"></i>Customized flavor selections</li>
-                        <li><i class="fas fa-check"></i>Bridal party packages</li>
-                        <li><i class="fas fa-check"></i>Photography-friendly designs</li>
-                    </ul>
-                </div>
-
-                <div class="service-card fade-in">
-                    <div class="service-header">
-                        <div class="service-icon">
-                            <i class="fas fa-birthday-cake"></i>
-                        </div>
-                        <div class="service-info">
-                            <div class="service-category">Celebrations</div>
-                            <h3>Private Parties</h3>
-                        </div>
-                    </div>
-                    <p class="service-description">Transform birthdays, anniversaries, and milestone celebrations into luxurious experiences with our premium private party catering services.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i>Customized party themes</li>
-                        <li><i class="fas fa-check"></i>Extended service hours</li>
-                        <li><i class="fas fa-check"></i>Party planning consultation</li>
-                        <li><i class="fas fa-check"></i>Guest capacity management</li>
-                    </ul>
-                </div>
-
-                <div class="service-card fade-in">
-                    <div class="service-header">
-                        <div class="service-icon">
-                            <i class="fas fa-calendar-alt"></i>
-                        </div>
-                        <div class="service-info">
-                            <div class="service-category">Special Events</div>
-                            <h3>Custom Events</h3>
-                        </div>
-                    </div>
-                    <p class="service-description">Whatever your occasion, our custom event services ensure your gathering is memorable with tailored solutions and exceptional service quality.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i>Bespoke service design</li>
-                        <li><i class="fas fa-check"></i>Event coordination support</li>
-                        <li><i class="fas fa-check"></i>Venue setup assistance</li>
-                        <li><i class="fas fa-check"></i>Post-event cleanup</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Packages Section -->
-    <section class="packages" id="packages">
-        <div class="container">
-            <div class="section-header fade-in">
-                <div class="section-badge">Service Packages</div>
-                <h2 class="section-title">Professional Service Packages</h2>
-                <p class="section-subtitle">Choose from our carefully crafted service packages designed to meet various event requirements and budgets.</p>
-            </div>
-            
-            <div class="packages-grid">
-                <div class="package-card fade-in">
-                    <h3 class="package-name">Essential</h3>
-                    <div class="package-price">Perfect for intimate gatherings</div>
-                    <ul class="package-features">
-                        <li><i class="fas fa-check"></i>Up to 25 guests</li>
-                        <li><i class="fas fa-check"></i>2 professional shishas</li>
-                        <li><i class="fas fa-check"></i>Premium flavor selection</li>
-                        <li><i class="fas fa-check"></i>4-hour service</li>
-                        <li><i class="fas fa-check"></i>Professional attendant</li>
-                        <li><i class="fas fa-check"></i>Setup & cleanup included</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-secondary">Get Quote</a>
-                </div>
-
-                <div class="package-card featured fade-in">
-                    <h3 class="package-name">Premium</h3>
-                    <div class="package-price">Ideal for special celebrations</div>
-                    <ul class="package-features">
-                        <li><i class="fas fa-check"></i>Up to 75 guests</li>
-                        <li><i class="fas fa-check"></i>4 premium shishas</li>
-                        <li><i class="fas fa-check"></i>Extended flavor menu</li>
-                        <li><i class="fas fa-check"></i>6-hour service</li>
-                        <li><i class="fas fa-check"></i>2 professional attendants</li>
-                        <li><i class="fas fa-check"></i>Decorative setup themes</li>
-                        <li><i class="fas fa-check"></i>Event coordination support</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-primary">Get Quote</a>
-                </div>
-
-                <div class="package-card fade-in">
-                    <h3 class="package-name">Executive</h3>
-                    <div class="package-price">For large-scale events</div>
-                    <ul class="package-features">
-                        <li><i class="fas fa-check"></i>Unlimited guests</li>
-                        <li><i class="fas fa-check"></i>8+ premium shishas</li>
-                        <li><i class="fas fa-check"></i>Exclusive flavor collection</li>
-                        <li><i class="fas fa-check"></i>Full-day service</li>
-                        <li><i class="fas fa-check"></i>Dedicated event manager</li>
-                        <li><i class="fas fa-check"></i>Custom branding options</li>
-                        <li><i class="fas fa-check"></i>VIP service areas</li>
-                        <li><i class="fas fa-check"></i>Photography coordination</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-secondary">Get Quote</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials" id="testimonials">
-        <div class="container">
-            <div class="section-header fade-in">
-                <div class="section-badge">Client Reviews</div>
-                <h2 class="section-title">What Our Clients Say</h2>
-                <p class="section-subtitle">Don't just take our word for it. Here's what our satisfied clients have to say about our professional catering services.</p>
-            </div>
-            
-            <div class="testimonials-grid">
-                <div class="testimonial-card fade-in">
-                    <div class="testimonial-quote">
-                        "Crown Shisha Catering exceeded our expectations for our corporate event. The service was impeccable, staff professional, and the setup was absolutely stunning. Our clients were thoroughly impressed."
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-info">
-                            <h4>Sarah Mitchell</h4>
-                            <p>Event Director, Tech Solutions Inc.</p>
-                        </div>
-                        <div class="testimonial-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card fade-in">
-                    <div class="testimonial-quote">
-                        "Our wedding was made even more special by Crown Shisha's elegant service. The attention to detail and professional presentation complemented our celebration perfectly. Highly recommended!"
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-info">
-                            <h4>Michael & Jessica Rodriguez</h4>
-                            <p>Wedding Clients</p>
-                        </div>
-                        <div class="testimonial-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card fade-in">
-                    <div class="testimonial-quote">
-                        "Professional, reliable, and exceptional quality. Crown Shisha Catering has been our go-to for multiple events. Their team consistently delivers outstanding service that our guests always remember."
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-info">
-                            <h4>David Chen</h4>
-                            <p>Private Event Host</p>
-                        </div>
-                        <div class="testimonial-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="section-header fade-in">
-                <div class="section-badge">Get In Touch</div>
-                <h2 class="section-title">Request Professional Consultation</h2>
-                <p class="section-subtitle">Ready to elevate your event? Contact our professional team for a customized quote and expert event planning consultation.</p>
-            </div>
-            
-            <div class="contact-grid">
-                <div class="contact-info fade-in">
-                    <div class="contact-item">
-                        <i class="fas fa-phone-alt"></i>
-                        <div class="contact-details">
-                            <h4>Business Phone</h4>
-                            <p>+1 (647) 906-9995<br>Available 24/7 for bookings</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div class="contact-details">
-                            <h4>Email Inquiries</h4>
-                            <p>bookcrownshisha@gmail.com<br>Response within 2 hours</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div class="contact-details">
-                            <h4>Service Coverage</h4>
-                            <p>Greater Toronto Area (GTA)<br>& surrounding regions</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <i class="fas fa-clock"></i>
-                        <div class="contact-details">
-                            <h4>Consultation Hours</h4>
-                            <p>Monday - Sunday: 9:00 AM - 11:00 PM<br>Emergency bookings available</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="contact-form fade-in">
-                    <form id="contactForm">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="firstName">First Name</label>
-                                <input type="text" id="firstName" name="firstName" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="lastName">Last Name</label>
-                                <input type="text" id="lastName" name="lastName" required>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="email">Email Address</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" name="phone" required>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="eventType">Event Type</label>
-                                <select id="eventType" name="eventType" required>
-                                    <option value="">Select Event Type</option>
-                                    <option value="corporate">Corporate Event</option>
-                                    <option value="wedding">Wedding</option>
-                                    <option value="birthday">Birthday Party</option>
-                                    <option value="private">Private Party</option>
-                                    <option value="graduation">Graduation</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="eventDate">Preferred Date</label>
-                                <input type="date" id="eventDate" name="eventDate">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="guestCount">Expected Guest Count</label>
-                            <input type="number" id="guestCount" name="guestCount" placeholder="Number of guests" min="1">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Event Details & Special Requirements</label>
-                            <textarea id="message" name="message" placeholder="Please provide details about your event, venue, timing, and any specific requirements..." required></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">Request Professional Consultation</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content fade-in">
-                <div class="footer-brand">
-                    <div class="footer-logo">
-                        <i class="fas fa-crown"></i>
-                        Crown Shisha Catering
-                    </div>
-                    <p class="footer-description">
-                        Professional shisha catering services for corporate events, weddings, and private functions. Serving the Greater Toronto Area with premium quality and exceptional service standards.
-                    </p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="#services">Corporate Events</a></li>
-                        <li><a href="#services">Wedding Catering</a></li>
-                        <li><a href="#services">Private Parties</a></li>
-                        <li><a href="#services">Custom Events</a></li>
-                        <li><a href="#packages">Service Packages</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Company</h4>
-                    <ul class="footer-links">
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#testimonials">Client Reviews</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="#contact">Get Quote</a></li>
-                        <li><a href="#">Service Areas</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <ul class="footer-links">
-                        <li><strong>Phone:</strong> +1 (647) 906-9995</li>
-                        <li><strong>Email:</strong> bookcrownshisha@gmail.com</li>
-                        <li><strong>Service Area:</strong> Toronto GTA</li>
-                        <li><strong>Hours:</strong> 24/7 Booking Available</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2025 Crown Shisha Catering. All rights reserved. | Licensed & Insured Professional Catering Services</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Loading Screen
-        window.addEventListener('load', () => {
-            const loading = document.getElementById('loading');
-            setTimeout(() => {
-                loading.classList.add('hidden');
-            }, 1200);
-        });
-
-        // Theme Toggle
-        const themeToggle = document.getElementById('themeToggle');
-        const body = document.body;
-
-        themeToggle.addEventListener('click', () => {
-            if (body.getAttribute('data-theme') === 'light') {
-                body.removeAttribute('data-theme');
-                localStorage.setItem('theme', 'dark');
-            } else {
-                body.setAttribute('data-theme', 'light');
-                localStorage.setItem('theme', 'light');
+            if (currentTheme === 'dark') {
+                document.body.classList.add('dark');
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
             }
-        });
-
-        // Load saved theme
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'light') {
-            body.setAttribute('data-theme', 'light');
-        }
-
-        // Mobile Menu
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const navMenu = document.getElementById('navMenu');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            const icon = mobileMenuBtn.querySelector('i');
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-times');
-        });
-
-        // Close mobile menu when clicking on link
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                const icon = mobileMenuBtn.querySelector('i');
-                icon.classList.add('fa-bars');
-                icon.classList.remove('fa-times');
-            });
-        });
-
-        // Smooth Scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+            
+            themeToggle.addEventListener('click', function() {
+                document.body.classList.toggle('dark');
+                
+                const theme = document.body.classList.contains('dark') ? 'dark' : 'light';
+                localStorage.setItem('theme', theme);
+                
+                // Update icon
+                if (theme === 'dark') {
+                    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
                 }
             });
-        });
-
-        // Scroll Animation Observer
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
+            
+            // Header scroll effect
+            window.addEventListener('scroll', function() {
+                const header = document.querySelector('header');
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
                 }
             });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Contact Form Enhancement
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
             
-            // Get form data
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
+            // Mobile navigation
+            const mobileToggle = document.getElementById('mobile-toggle');
+            const mobileNav = document.getElementById('mobile-nav');
+            const mobileNavClose = document.getElementById('mobile-nav-close');
+            const overlay = document.getElementById('overlay');
             
-            // Create professional email content
-            const subject = `Professional Consultation Request - ${data.eventType || 'Event'} Catering`;
-            const body = `Dear Crown Shisha Catering Team,
-
-I am interested in your professional catering services for an upcoming event. Please find my details below:
-
-CLIENT INFORMATION:
-Name: ${data.firstName} ${data.lastName}
-Email: ${data.email}
-Phone: ${data.phone}
-
-EVENT DETAILS:
-Event Type: ${data.eventType}
-Preferred Date: ${data.eventDate || 'To be discussed'}
-Expected Guests: ${data.guestCount || 'To be confirmed'}
-
-ADDITIONAL INFORMATION:
-${data.message}
-
-I would appreciate a professional consultation to discuss my requirements and receive a customized quote.
-
-Best regards,
-${data.firstName} ${data.lastName}`;
-            
-            // Open email client with professional format
-            const encodedBody = encodeURIComponent(body);
-            const encodedSubject = encodeURIComponent(subject);
-            window.location.href = `mailto:bookcrownshisha@gmail.com?subject=${encodedSubject}&body=${encodedBody}`;
-            
-            // Show professional confirmation message
-            showNotification('Thank you for your inquiry! Your email client will open to send your professional consultation request.', 'success');
-            
-            // Reset form
-            this.reset();
-        });
-
-        // Header scroll effect with professional styling
-        let lastScrollTop = 0;
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('.header');
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            
-            if (scrollTop > 100) {
-                header.style.background = body.getAttribute('data-theme') === 'light' 
-                    ? 'rgba(255, 255, 255, 0.98)' 
-                    : 'rgba(15, 15, 15, 0.98)';
-                header.style.backdropFilter = 'blur(20px)';
-                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-            } else {
-                header.style.background = body.getAttribute('data-theme') === 'light' 
-                    ? 'rgba(255, 255, 255, 0.97)' 
-                    : 'rgba(15, 15, 15, 0.97)';
-                header.style.backdropFilter = 'blur(15px)';
-                header.style.boxShadow = 'none';
+            function openMobileNav() {
+                mobileNav.classList.add('active');
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
             }
             
-            lastScrollTop = scrollTop;
-        });
-
-        // Enhanced service card interactions
-        document.querySelectorAll('.service-card').forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                card.style.transform = 'translateY(-12px)';
-                card.style.transition = 'all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+            function closeMobileNav() {
+                mobileNav.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+            
+            if (mobileToggle) {
+                mobileToggle.addEventListener('click', openMobileNav);
+            }
+            
+            if (mobileNavClose) {
+                mobileNavClose.addEventListener('click', closeMobileNav);
+            }
+            
+            if (overlay) {
+                overlay.addEventListener('click', closeMobileNav);
+            }
+            
+            // Close mobile menu when clicking on a link
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', closeMobileNav);
             });
             
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'translateY(0)';
-            });
-        });
-
-        // Professional notification system
-        function showNotification(message, type = 'info') {
-            // Remove any existing notifications
-            const existingNotification = document.querySelector('.notification');
-            if (existingNotification) {
-                existingNotification.remove();
+            // Contact form handling
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Get form data
+                    const formData = new FormData(contactForm);
+                    const name = document.getElementById('name').value || 'friend';
+                    
+                    // Show success message (in a real app, you would send this to a server)
+                    alert(`Thank you, ${name}! Your inquiry has been received. We will contact you within 24 hours.`);
+                    
+                    // Reset form
+                    contactForm.reset();
+                });
             }
-
-            // Create notification element
-            const notification = document.createElement('div');
-            notification.className = `notification notification-${type}`;
-            notification.style.cssText = `
-                position: fixed;
-                top: 100px;
-                right: 20px;
-                background: ${type === 'success' ? 'var(--success-color)' : 'var(--primary-gold)'};
-                color: white;
-                padding: 15px 20px;
-                border-radius: 8px;
-                font-weight: 500;
-                z-index: 10000;
-                max-width: 400px;
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-                transform: translateX(100%);
-                transition: transform 0.3s ease;
-            `;
-            notification.textContent = message;
-
-            // Add to DOM and animate in
-            document.body.appendChild(notification);
-            setTimeout(() => {
-                notification.style.transform = 'translateX(0)';
-            }, 100);
-
-            // Remove after delay
-            setTimeout(() => {
-                notification.style.transform = 'translateX(100%)';
-                setTimeout(() => {
-                    if (notification.parentNode) {
-                        notification.parentNode.removeChild(notification);
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
                     }
-                }, 300);
-            }, 5000);
-        }
-
-        // Professional counter animation for trust indicators
-        function animateCounters() {
-            const counters = document.querySelectorAll('.trust-number');
-            
-            counters.forEach(counter => {
-                const target = counter.textContent;
-                const numericValue = parseInt(target.replace(/\D/g, ''));
-                const suffix = target.replace(/\d+/g, '');
-                let current = 0;
-                const increment = numericValue / 50;
-                const timer = setInterval(() => {
-                    current += increment;
-                    if (current >= numericValue) {
-                        counter.textContent = target;
-                        clearInterval(timer);
-                    } else {
-                        counter.textContent = Math.floor(current) + suffix;
-                    }
-                }, 40);
-            });
-        }
-
-        // Trigger counter animation when trust section is visible
-        const trustSection = document.querySelector('.trust-section');
-        if (trustSection) {
-            const trustObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        animateCounters();
-                        trustObserver.unobserve(entry.target);
-                    }
                 });
-            }, { threshold: 0.5 });
-            
-            trustObserver.observe(trustSection);
-        }
-
-        // Enhanced form validation
-        const form = document.getElementById('contactForm');
-        const inputs = form.querySelectorAll('input, select, textarea');
-        
-        inputs.forEach(input => {
-            input.addEventListener('blur', validateField);
-            input.addEventListener('input', clearValidationError);
+            });
         });
-
-        function validateField(e) {
-            const field = e.target;
-            const value = field.value.trim();
-            
-            // Remove existing error styling
-            field.style.borderColor = '';
-            
-            // Validate required fields
-            if (field.hasAttribute('required') && !value) {
-                showFieldError(field, 'This field is required');
-                return false;
-            }
-            
-            // Validate email format
-            if (field.type === 'email' && value) {
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!emailRegex.test(value)) {
-                    showFieldError(field, 'Please enter a valid email address');
-                    return false;
-                }
-            }
-            
-            // Validate phone format
-            if (field.type === 'tel' && value) {
-                const phoneRegex = /^[\+]?[\d\s\-\(\)]{10,}$/;
-                if (!phoneRegex.test(value)) {
-                    showFieldError(field, 'Please enter a valid phone number');
-                    return false;
-                }
-            }
-            
-            return true;
-        }
-
-        function showFieldError(field, message) {
-            field.style.borderColor = '#e74c3c';
-            
-            // Remove existing error message
-            const existingError = field.parentNode.querySelector('.field-error');
-            if (existingError) {
-                existingError.remove();
-            }
-            
-            // Add new error message
-            const errorElement = document.createElement('div');
-            errorElement.className = 'field-error';
-            errorElement.style.cssText = `
-                color: #e74c3c;
-                font-size: 0.85rem;
-                margin-top: 5px;
-                font-weight: 500;
-            `;
-            errorElement.textContent = message;
-            field.parentNode.appendChild(errorElement);
-        }
-
-        function clearValidationError(e) {
-            const field = e.target;
-            field.style.borderColor = '';
-            
-            const errorElement = field.parentNode.querySelector('.field-error');
-            if (errorElement) {
-                errorElement.remove();
-            }
-        }
-
-        // Professional page load performance optimization
-        document.addEventListener('DOMContentLoaded', () => {
-            // Optimize images loading
-            const images = document.querySelectorAll('img');
-            images.forEach(img => {
-                img.loading = 'lazy';
-            });
-            
-            // Initialize professional interactions
-            initProfessionalAnimations();
-        });
-
-        function initProfessionalAnimations() {
-            // Add subtle hover effects to buttons
-            document.querySelectorAll('.btn').forEach(btn => {
-                btn.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-2px)';
-                });
-                
-                btn.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0)';
-                });
-            });
-            
-            // Add professional card hover effects
-            document.querySelectorAll('.package-card, .testimonial-card').forEach(card => {
-                card.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-5px)';
-                    this.style.boxShadow = '0 15px 40px rgba(201, 169, 110, 0.15)';
-                });
-                
-                card.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0)';
-                    this.style.boxShadow = '';
-                });
-            });
-        }
-
-        // Professional date picker enhancement
-        const dateInput = document.getElementById('eventDate');
-        if (dateInput) {
-            // Set minimum date to today
-            const today = new Date().toISOString().split('T')[0];
-            dateInput.min = today;
-            
-            // Set maximum date to 1 year from now
-            const maxDate = new Date();
-            maxDate.setFullYear(maxDate.getFullYear() + 1);
-            dateInput.max = maxDate.toISOString().split('T')[0];
-        }
-
-        // Professional scroll-to-top functionality
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 500) {
-                showScrollTopButton();
-            } else {
-                hideScrollTopButton();
-            }
-        });
-
-        function showScrollTopButton() {
-            let scrollBtn = document.getElementById('scrollTopBtn');
-            if (!scrollBtn) {
-                scrollBtn = document.createElement('button');
-                scrollBtn.id = 'scrollTopBtn';
-                scrollBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
-                scrollBtn.style.cssText = `
-                    position: fixed;
-                    bottom: 30px;
-                    right: 30px;
-                    width: 50px;
-                    height: 50px;
-                    background: var(--primary-gold);
-                    color: var(--darker-bg);
-                    border: none;
-                    border-radius: 50%;
-                    cursor: pointer;
-                    font-size: 1.2rem;
-                    z-index: 1000;
-                    transition: all 0.3s ease;
-                    box-shadow: 0 5px 15px rgba(201, 169, 110, 0.3);
-                `;
-                
-                scrollBtn.addEventListener('click', () => {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                });
-                
-                scrollBtn.addEventListener('mouseenter', () => {
-                    scrollBtn.style.transform = 'translateY(-3px)';
-                    scrollBtn.style.boxShadow = '0 8px 25px rgba(201, 169, 110, 0.4)';
-                });
-                
-                scrollBtn.addEventListener('mouseleave', () => {
-                    scrollBtn.style.transform = 'translateY(0)';
-                    scrollBtn.style.boxShadow = '0 5px 15px rgba(201, 169, 110, 0.3)';
-                });
-                
-                document.body.appendChild(scrollBtn);
-            }
-            scrollBtn.style.opacity = '1';
-            scrollBtn.style.visibility = 'visible';
-        }
-
-        function hideScrollTopButton() {
-            const scrollBtn = document.getElementById('scrollTopBtn');
-            if (scrollBtn) {
-                scrollBtn.style.opacity = '0';
-                scrollBtn.style.visibility = 'hidden';
-            }
-        }
     </script>
-</body>
+
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+  const wrapper = document.getElementById('portfolio-wrapper');
+  const btn = document.getElementById('see-more-btn');
+  const portfolioSection = document.getElementById('portfolio');
+  if (!wrapper || !btn) return;
+
+  wrapper.classList.add('collapsed');
+
+  btn.addEventListener('click', () => {
+    const isCollapsed = wrapper.classList.toggle('collapsed');
+    btn.textContent = isCollapsed ? 'See More' : 'See Less';
+
+    if (isCollapsed) {
+      // Smooth scroll to top of portfolio section when collapsing
+      portfolioSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script></body>
 </html>
